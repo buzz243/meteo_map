@@ -8,43 +8,62 @@
 </head>
 <body>
 <form method="post" action="traitement.php">
-    <tr>
-        <td>
-            <label name="libele" id="libele">
-                date
-            </label>
-        </td>
-        <td>
-            <label name="Phenomene" id="Phenomene">
-                Phenomene
-            </label>
-        </td>
-        <td>
-            <label name="tempmMin" id="tempMin">
-                T°Min
-            </label>
-        </td>
-        <td>
-            <label name="tempMax" id="tempMax">
-                T°Max
-            </label>
-        </td> <td>
-            <label name="dirVit" id="dirVit">
-                Direction et vitesse du vent(Km/h)
-            </label>
-        </td> <td>
-            <label name="EauPrec" id="EauPrec">
-                Eau Precipitable(mm)
-            </label>
-        </td>
-    </tr>
-    <br/>
-    <input type="date" /><br/><br/>
-    <label name="Kinshasa" id="kinshasa">
-        Kinshasa
-    </label>
-    <input type="" />
-   
+   <tablre>
+        <tr>
+            <td>
+                <label name="libele" id="libele">
+                        date
+                </label>
+            </td>
+            <td>
+                <label name="Phenomene" id="Phenomene">
+                    Phenomene
+                </label>
+            </td>
+            <td>
+                <label name="tempmMin" id="tempMin">
+                    T°Min
+                </label>
+            </td>
+            <td>
+                <label name="tempMax" id="tempMax">
+                    T°Max
+                </label>
+            </td>
+            <td>
+                <label name="dirVit" id="dirVit">
+                    Direction et vitesse du vent(Km/h)
+                </label>
+            </td>
+            <td>
+                <label name="EauPrec" id="EauPrec">
+                    Eau Precipitable(mm)
+                </label>
+            </td>
+            <td>
+                <label name="risqueValue" id="risqueValue">
+                    risqueValue
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select name="selectPheno" id="selectPheno">
+                    <option value="">--Please choose an option--</option>
+                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
+                    <option value="oragePluie">Orage avec pluies</option>
+                    <option value="nuagePluie">nuageux avec pluies</option>
+                    <option value="ensoleillé">Ensoleillé</option>
+                </select>
+            </td>
+        </tr>
+        <br/>
+        <input type="date" /><br/><br/>
+        <label name="Kinshasa" id="kinshasa">
+            Kinshasa
+        </label>
+        <input type="" />
+    </table>   
 </form>
 </body>
 </html>
