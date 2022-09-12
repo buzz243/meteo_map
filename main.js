@@ -30,6 +30,33 @@ function init() {
         popupAnchor: [0,0]
 
     });
+    var nuage = L.icon ({
+        iconUrl: './images/PNG/nuageux1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+    });
+    var cielgris = L.icon ({
+        iconUrl: './images/PNG/cielgris1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+    });
+    var orage = L.icon ({
+        iconUrl: './images/PNG/orage1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+    })
     var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], {icon: soleil}).addTo(map);
     var bandundu = L.marker([-4.984365759943966, 18.810533788896517],{icon: soleil}).addTo(map);
     var hautUele = L.marker([2.7718690446179832, 27.606883031302402],{icon: soleil}).addTo(map);
