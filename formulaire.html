@@ -7,7 +7,44 @@
     <title>formulaire de renseignement</title>
 </head>
 <body>
-<label for="nom">Quel est votre nom ?</label>
-<input type="text" id="nom">
+<form method="post" action="traitement.php">
+    <tr>
+        <td>
+            <label name="libele" id="libele">
+                date
+            </label>
+        </td>
+        <td>
+            <label name="Phenomene" id="Phenomene">
+                Phenomene
+            </label>
+        </td>
+        <td>
+            <label name="tempmMin" id="tempMin">
+                T°Min
+            </label>
+        </td>
+        <td>
+            <label name="tempMax" id="tempMax">
+                T°Max
+            </label>
+        </td> <td>
+            <label name="dirVit" id="dirVit">
+                Direction et vitesse du vent(Km/h)
+            </label>
+        </td> <td>
+            <label name="EauPrec" id="EauPrec">
+                Eau Precipitable(mm)
+            </label>
+        </td>
+    </tr>
+    <br/>
+    <input type="date" /><br/><br/>
+    <label name="Kinshasa" id="kinshasa">
+        Kinshasa
+    </label>
+    <input type="" />
+   
+</form>
 </body>
 </html>
