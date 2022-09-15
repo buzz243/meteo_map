@@ -17,7 +17,7 @@ function init() {
             }).addTo(map);
     */
    //creation du calque
-    var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+    var openStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
         maxZoom: 5,
         minZoom: 5,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -34,7 +34,37 @@ function init() {
 
     });
     var pluie = L.icon({
-        iconUrl: './images/PNG/soleil1.png',
+        iconUrl: './images/PNG/pluie1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+
+    });   
+    var orage = L.icon({
+        iconUrl: './images/PNG/orage1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+
+    });
+    var cielGris = L.icon({
+        iconUrl: './images/PNG/cielgris1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+
+    });
+    var nuageux = L.icon({
+        iconUrl: './images/PNG/nuageux1.png',
         shadowUrl: './images/marker-shadow.png',
         iconSize: [40,40],
         shadowSize:[50,50],
