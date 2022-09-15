@@ -5,7 +5,9 @@ function init() {
         lat: -3.1496523254397295,
         lng: 24.17242279326707,
     }
+    //taille de zoom
     const zoomLevel = 5;
+    //creation de la map
     const map = L.map('map').setView([parcThabor.lat, parcThabor.lng], zoomLevel);
 
     /*      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -14,12 +16,13 @@ function init() {
                 attribution: '© OpenStreetMap'
             }).addTo(map);
     */
+   //creation du calque
     var OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
         maxZoom: 5,
         minZoom: 5,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
+    //creation des icons
     var soleil = L.icon({
         iconUrl: './images/PNG/soleil1.png',
         shadowUrl: './images/marker-shadow.png',
@@ -30,6 +33,17 @@ function init() {
         popupAnchor: [0,0]
 
     });
+    var pluie = L.icon({
+        iconUrl: './images/PNG/soleil1.png',
+        shadowUrl: './images/marker-shadow.png',
+        iconSize: [40,40],
+        shadowSize:[50,50],
+        iconAnchor: [42,35],
+        shadowAnchor: [39,45],
+        popupAnchor: [0,0]
+
+    });
+    //ajout de marker et leurs icons
     var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], {icon: soleil}).addTo(map);
     var bandundu = L.marker([-4.984365759943966, 18.810533788896517],{icon: soleil}).addTo(map);
     var hautUele = L.marker([2.7718690446179832, 27.606883031302402],{icon: soleil}).addTo(map);
