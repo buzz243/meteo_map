@@ -77,8 +77,8 @@ function init() {
     var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], {icon: orage}).addTo(map);
     var bandundu = L.marker([-4.984365759943966, 18.810533788896517],{icon: soleil}).addTo(map);
     var hautUele = L.marker([3.158029, 29.410376],{icon: soleil}).addTo(map);
-    var kongoCentral = L.marker([-5.7500311839417755, 13.405260245425373],{icon: soleil}).addTo(map);
-    var kwango = L.marker([-6.762322, 17.821885],{icon: soleil}).addTo(map);
+    var kongoCentral = L.marker([-5.741355, 14.886933],{icon: soleil}).addTo(map);
+    var kwango = L.marker([-7.378996, 18.701263],{icon: soleil}).addTo(map);
     var kwilu = L.marker([-3.4828943094735356, 17.516566699193763],{icon: soleil}).addTo(map);
     var maindombe = L.marker([-3.162522, 19.506401],{icon: soleil}).addTo(map);
     var kasai = L.marker([-3.759058, 22.071509],{icon: soleil}).addTo(map);
