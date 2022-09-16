@@ -74,7 +74,7 @@ function init() {
 
     });
     //ajout de marker et leurs icons
-    var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], {icon: orage}).addTo(map);
+    var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], {icon: soleil}).addTo(map);
     var bandundu = L.marker([-4.984365759943966, 18.810533788896517],{icon: soleil}).addTo(map);
     var hautUele = L.marker([3.158029, 29.410376],{icon: soleil}).addTo(map);
     var kongoCentral = L.marker([-5.741355, 14.886933],{icon: soleil}).addTo(map);
