@@ -5,49 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulaire de renseignement</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <form method="post" action="traitement.php">
-   <tablre>
+   <table class="t1 t2">
     <caption>Bullettin mettelsat</caption>
+    <br />
         <tr>
-            <td>
-                <label name="libele" id="libele">
-                        date
+            <th>
+                <label name="libele" class="libele" >
+                        Date valide
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="Phenomene" id="Phenomene">
                     Phenomene
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="tempmMin" id="tempMin">
-                    T°Min
+                    T°Min (°C)
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="tempMax" id="tempMax">
-                    T°Max
+                    T°Max (°C)
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="dirVit" id="dirVit">
                     Direction et vitesse du vent(Km/h)
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="EauPrec" id="EauPrec">
                     Eau Precipitable(mm)
                 </label>
-            </td>
-            <td>
+            </th>
+            <th>
                 <label name="risqueValue" id="risqueValue">
                     risqueValue
                 </label>
-            </td>
+            </th>
         </tr>
         <tr>
+            <td>
+                <input type="date" />
+            </td>
             <td>
                 <select name="selectPheno" id="selectPheno">
                     <option value="">--Please choose an option--</option>
@@ -57,13 +62,26 @@
                     <option value="ensoleillé">Ensoleillé</option>
                 </select>
             </td>
+            <td>
+                <input type="number" id="tempMinIn"/>
+            </td>
+            <td>
+                <input type="number" id="tempMaxIn"/>
+            </td>
+            <td>
+                <select name="selectPheno" id="selectPheno">
+                    <option value="">--Please choose an option--</option>
+                    <option value="est">Est</option>
+                    <option value="Ouest">Ouest</option>
+                    <option value="nord">nord</option>
+                    <option value="sud">Sud</option>
+                    <option value="Sud-Est">Sud-Est</option>
+                    <option value="Sud-Ouest">Sud-Ouest</option>
+                    <option value="Nord-Est">Nord-Est</option>
+                    <option value="Nord-Ouest">Nord-Ouest</option>
+                </select>
+            </td>
         </tr>
-        <br/>
-        <input type="date" /><br/><br/>
-        <label name="Kinshasa" id="kinshasa">
-            Kinshasa
-        </label>
-        <input type="" />
     </table>   
 </form>
 </body>

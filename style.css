@@ -4,3 +4,13 @@
     margin: auto;
     margin-top: 50px;
 }
+/*style du formulaire*/
+table{
+    border-collapse: collapse;
+}
+tr, th, td {
+    border: 2px solid black;
+}
+td{
+    padding: 10px;
+}
