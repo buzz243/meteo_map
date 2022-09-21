@@ -7,10 +7,18 @@
 /*style du formulaire*/
 table{
     border-collapse: collapse;
+    position: relative;
+    margin:auto;
 }
 tr, th, td {
     border: 2px solid black;
 }
 td{
     padding: 10px;
+}
+input{
+    width: 50px;
+}
+caption{
+    text-size: 100px;
 }
