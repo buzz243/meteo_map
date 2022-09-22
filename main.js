@@ -6,7 +6,7 @@ function init() {
         lng: 24.17242279326707,
     }
     //taille de zoom
-    const zoomLevel = 7;
+    const zoomLevel = 5;
     //creation de la map
     const map = L.map('map').setView([parcThabor.lat, parcThabor.lng], zoomLevel);
 
@@ -102,7 +102,8 @@ function init() {
     var nordKivu = L.marker([-1.573144091486702, 29.250535502258046],{icon: soleil}).addTo(map);
     var ituri = L.marker([1.071038, 30.014824],{icon: soleil}).addTo(map);
 }
-function result(){
+function result(e){
+    e.preventDefault();
     let phenoKin = document.getElementById('phenoKin').value;
     let tempMinIn = document.getElementById('tempMinIn').value;
     let tempMaxIn = document.getElementById('tempMaxIn').value;
@@ -116,6 +117,6 @@ function result(){
     sessionStorage.setItem('dirKin', dirKin);
     sessionStorage.setItem('preMin', preMin);
     sessionStorage.setItem('preMax', preMax);
-    console.log(dirKin);
+    var pheno = sessionStorage.getItem();
 
 }
