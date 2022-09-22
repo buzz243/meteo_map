@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<form method="post" action="traitement.php">
+<form method="post" onsubmit="result()" action="traitement.php">
    <table class="t1 t2">
     <caption>Bullettin mettelsat</caption>
     <br />
@@ -56,7 +56,7 @@
                 </label>
             </td>
             <td>
-                <select name="selectPheno" id="selectPheno">
+                <select name="phenoKin" id="phenoKin">
                     <option value="">--Please choose an option--</option>
                     <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
                     <option value="oragePluie">Orage avec pluies</option>
@@ -65,13 +65,13 @@
                 </select>
             </td>
             <td>
-                <input type="number" id="tempMinIn"/>
+                <input type="number" name="tempMinIn" id="tempMinIn"/>
             </td>
             <td>
-                <input type="number" id="tempMaxIn"/>
+                <input type="number" name="tempMaxIn"id="tempMaxIn"/>
             </td>
             <td>
-                <select name="selectPheno" id="selectPheno">
+                <select name="dirKin" id="dirKin">
                     <option value="">--Please choose an option--</option>
                     <option value="est">Est</option>
                     <option value="Ouest">Ouest</option>
@@ -84,7 +84,7 @@
                 </select>
             </td>
             <td>
-                <input type="number"/> - <input type="number"/> mm
+                <input type="number" id="preMin"/> - <input type="number" id="preMax"/> mm
             </td>
         </tr>
         <tr>
@@ -1075,7 +1075,9 @@
                 <input type="number"/> - <input type="number"/> mm
             </td>
         </tr>
-    </table>   
+    </table> 
+    <button class="btn btn-primary" type="submit">Envoyer</button>  
 </form>
+<script src="./main.js"></script>
 </body>
 </html>

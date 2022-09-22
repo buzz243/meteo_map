@@ -12,13 +12,19 @@ table{
 }
 tr, th, td {
     border: 2px solid black;
+    font-weight: bold;
 }
 td{
     padding: 10px;
 }
 input{
-    width: 50px;
+    width: 60px;
+    position: relative;
 }
 caption{
-    text-size: 100px;
+    font-weight: bold;
+    background-color: #0AD;
+}
+button{
+    align-items: center;
 }
