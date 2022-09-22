@@ -6,7 +6,7 @@ function init() {
         lng: 24.17242279326707,
     }
     //taille de zoom
-    const zoomLevel = 5;
+    const zoomLevel = 7;
     //creation de la map
     const map = L.map('map').setView([parcThabor.lat, parcThabor.lng], zoomLevel);
 
@@ -18,7 +18,7 @@ function init() {
     */
    //creation du calque
     var openStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
-        maxZoom: 5,
+        maxZoom: 7,
         minZoom: 5,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
