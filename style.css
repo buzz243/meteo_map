@@ -15,10 +15,10 @@ tr, th, td {
     font-weight: bold;
 }
 td{
-    padding: 10px;
+    padding: 5px;
 }
 input{
-    width: 60px;
+    width: 40px;
     position: relative;
 }
 caption{
