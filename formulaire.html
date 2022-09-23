@@ -19,6 +19,9 @@
 <body>
     <div id="map"></div>
     <form>
+
+        <button class="btn btn-primary" id="Envoyer" type="submit">Sauvegarder</button>
+        <button class="btn btn-primary" id="actualiser">Actualiser</button>
         <table class="t1 t2">
             <caption>Bullettin mettelsat</caption>
             <br />
@@ -26,80 +29,6 @@
                 <th>
                     <label name="libele" class="libele">
                         Date valide
-<<<<<<< HEAD
-                </label>
-            </th>
-            <th>
-                <label name="Phenomene" id="Phenomene">
-                    Phenomene
-                </label>
-            </th>
-            <th>
-                <label name="tempmMin" id="tempMin">
-                    T°Min (°C)
-                </label>
-            </th>
-            <th>
-                <label name="tempMax" id="tempMax">
-                    T°Max (°C)
-                </label>
-            </th>
-            <th>
-                <label name="dirVit" id="dirVit">
-                    Direction et vitesse du vent(Km/h)
-                </label>
-            </th>
-            <th>
-                <label name="EauPrec" id="EauPrec">
-                    Eau Precipitable(mm)
-                </label>
-            </th>
-            <th>
-                <label name="risqueValue" id="risqueValue">
-                    risqueValue
-                </label>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <label name="kinshasa" id="kinshasa">
-                    1. Kinshasa
-                </label>
-            </td>
-            <td>
-                <select name="phenoKin" id="phenoKin">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" name="tempMinIn" id="tempMinIn"/>
-            </td>
-            <td>
-                <input type="number" name="tempMaxIn"id="tempMaxIn"/>
-            </td>
-            <td>
-                <select name="dirKin" id="dirKin">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKin"/> - <input type="number" id="presMaxKin"/> mm
-            </td>
-        </tr>
-        <tr>
-=======
                     </label>
                 </th>
                 <th>
@@ -142,7 +71,7 @@
                 <td>
                     <select name="phenoKin" id="phenoKin">
                         <option value="">--Please choose an option--</option>
-                        <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
                         <option value="oragePluie">Orage avec pluies</option>
                         <option value="nuagePluie">nuageux avec pluies</option>
                         <option value="ensoleillé">Ensoleillé</option>
@@ -168,1000 +97,1000 @@
                     </select>
                 </td>
                 <td>
-                    <input type="number" id="preMin" /> - <input type="number" id="preMax" /> mm
+                    <input type="number" id="presMinKin" /> - <input type="number" id="presMaxKin" /> mm
                 </td>
             </tr>
-            <!--<tr>
->>>>>>> 7942270c527696bae785d58e339e22aa469237af
-            <td>
-                <label name="kinshasa" id="kinshasa">
-                    2. Bandundu
-                </label>
-            </td>
-            <td>
-                <select name="phenoBan" id="phenoBan">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinBan"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxBan"/>
-            </td>
-            <td>
-                <select name="dirBan" id="dirBan">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number"/> - <input type="number"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="hUele" id="hUele">
-                    3. Haut-Uele
-                </label>
-            </td>
-            <td>
-                <select name="phenoHUel" id="phenoHUel">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinHUel"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxHUele"/>
-            </td>
-            <td>
-                <select name="dirHUel" id="dirHUel">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinHUel"/> - <input type="number" id="presMaxHUel"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="kongoCentral" id="congoCentral">
-                    4. Kongo Central
-                </label>
-            </td>
-            <td>
-                <select name="phenoKCent" id="phenoKCent">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinKCent"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxKCent"/>
-            </td>
-            <td>
-                <select name="dirKCent" id="dirKCent">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKCent"/> - <input type="number" id="presMaxKCent"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="kwango" id="kwango">
-                    5. Kwango
-                </label>
-            </td>
-            <td>
-                <select name="phenoKwa" id="phenoKwa">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinKwa"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxKwa"/>
-            </td>
-            <td>
-                <select name="selectPheno" id="selectPheno">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKaw"/> - <input type="number" id="presMaxKaw"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="kwilu" id="kwilu">
-                    6. Kwilu
-                </label>
-            </td>
-            <td>
-                <select name="phenoKwi" id="phenoKwi">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinKwi"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxKwi"/>
-            </td>
-            <td>
-                <select name="dirKwi" id="dirKwi">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKwi"/> - <input type="number" id="presMaxKwi"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="maindombe" id="maindombe">
-                    7. Maindombe
-                </label>
-            </td>
-            <td>
-                <select name="phenoMai" id="phenoMai">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinMai"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxMai"/>
-            </td>
-            <td>
-                <select name="dirMai" id="dirMai">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinMai"/> - <input type="number" id="presMaxMai"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="kasai" id="kasai">
-                    8. Kasai
-                </label>
-            </td>
-            <td>
-                <select name="phenoKas" id="phenoKas">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinKas"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxKas"/>
-            </td>
-            <td>
-                <select name="dirKas" id="dirKas">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKas"/> - <input type="number" id="presMaxKas"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="equateur" id="equateur">
-                    9. Equateur
-                </label>
-            </td>
-            <td>
-                <select name="phenoEqua" id="phenoEqua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinEqua"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxEqua"/>
-            </td>
-            <td>
-                <select name="dirEqua" id="dirEqua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinEqua"/> - <input type="number" id="presMaxEqua"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="kasaiCentral" id="KasaiCentral">
-                    10. Kasai Central
-                </label>
-            </td>
-            <td>
-                <select name="phenoKasC" id="phenoKasC">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinKasC"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxKasC"/>
-            </td>
-            <td>
-                <select name="dirKasC" id="dirKasC">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinKasC"/> - <input type="number" id="presMaxKasC"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="sankuru" id="sankuru">
-                    11. Sankuru
-                </label>
-            </td>
-            <td>
-                <select name="phenoSank" id="phenoSank">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinSank"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxSank"/>
-            </td>
-            <td>
-                <select name="dirSank" id="dirSank">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinSank"/> - <input type="number" id="presMaxSank"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="tshuapa" id="tshuapa">
-                    12. Tshuapa
-                </label>
-            </td>
-            <td>
-                <select name="phenoTshua" id="phenoTshua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinTshua"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxTshua"/>
-            </td>
-            <td>
-                <select name="dirTshua" id="dirTshua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinTshua"/> - <input type="number" id="presMaxTshua"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="mongala" id="mongala">
-                    13. Mongala
-                </label>
-            </td>
-            <td>
-                <select name="phenoMong" id="phenoMong">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinMong"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxMong"/>
-            </td>
-            <td>
-                <select name="dirMong" id="dirMong">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinMong"/> - <input type="number" id="presMaxMong"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="sudUbangi" id="sudUbnagi">
-                    14. Sud Ubangi
-                </label>
-            </td>
-            <td>
-                <select name="phenoSUba" id="phenoSUba">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinSUba"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxSUba"/>
-            </td>
-            <td>
-                <select name="dirSUba" id="dirSUba">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinSUba"/> - <input type="number" id="presMaxSUba"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="NordUbangi" id="NordUbangi">
-                    15. Nord Ubangi
-                </label>
-            </td>
-            <td>
-                <select name="phenoNUba" id="phenoNUba">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinNUba"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxNUba"/>
-            </td>
-            <td>
-                <select name="dirNUba" id="dirNUba">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinNUba"/> - <input type="number" id="presMaxNUba"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="basUele" id="basUele">
-                    16. Bas-Uele
-                </label>
-            </td>
-            <td>
-                <select name="phenoBUel" id="phenoBUel">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinBUel"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxBUel"/>
-            </td>
-            <td>
-                <select name="dirBUel" id="dirBUel">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinBUel"/> - <input type="number" id="presMaxBUel"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="tshopo" id="tshopo">
-                    17. Tshopo
-                </label>
-            </td>
-            <td>
-                <select name="phenoTsho" id="phenoTsho">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinTsho"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxTsho"/>
-            </td>
-            <td>
-                <select name="selectPheno" id="selectPheno">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinTsho"/> - <input type="number" id="presMaxTsho"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="maniema" id="maniema">
-                    18. Maniema
-                </label>
-            </td>
-            <td>
-                <select name="phenoMan" id="phenoMan">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinMan"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxMan"/>
-            </td>
-            <td>
-                <select name="dirMan" id="dirMan">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinMan"/> - <input type="number" id="presMaxMan"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="lomamie" id="lomamie">
-                    19. Lomamie
-                </label>
-            </td>
-            <td>
-                <select name="phenoLom" id="phenoLom">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinLom"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxLom"/>
-            </td>
-            <td>
-                <select name="dirLom" id="dirLom">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinLom"/> - <input type="number" id="presMaxLom"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="hautLomamie" id="hautLomamie">
-                    20. Haut-Lomamie
-                </label>
-            </td>
-            <td>
-                <select name="phenoHLom" id="phenoHLom">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinHLom"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxHLom"/>
-            </td>
-            <td>
-                <select name="dirHLom" id="dirHLom">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinHLom"/> - <input type="number" id="presMaxHLom"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="lualaba" id="lualaba">
-                    21. Lualaba
-                </label>
-            </td>
-            <td>
-                <select name="phenoLua" id="phenoLua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinLua"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxLua"/>
-            </td>
-            <td>
-                <select name="dirLua" id="dirLua">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinLua"/> - <input type="number" id="presMaxLua"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="hautKatanga" id="hautKatanga">
-                    22. Haut-Katanga
-                </label>
-            </td>
-            <td>
-                <select name="phenoHKat" id="phenoHKat">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinHKat"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxHKat"/>
-            </td>
-            <td>
-                <select name="dirHKat" id="dirHKat">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinHKat"/> - <input type="number" id="presMaxHkat"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="tanganyka" id="tanganyka">
-                    23. Tanganyka
-                </label>
-            </td>
-            <td>
-                <select name="phenoTang" id="phenoTang">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinTang"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxTang"/>
-            </td>
-            <td>
-                <select name="dirTang" id="dirTang">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinTang"/> - <input type="number" id="presMaxTang"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="lualaba" id="lualaba">
-                    24. Lualaba
-                </label>
-            </td>
-            <td>
-                <select name="phenoLual" id="phenoLual">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinLual"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxLual"/>
-            </td>
-            <td>
-                <select name="dirLual" id="dirLual">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinLual"/> - <input type="number" id="presMaxLual"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="sudKivu" id="sudKivu">
-                    25. Sud-Kivu
-                </label>
-            </td>
-            <td>
-                <select name="phenoSKiv" id="phenoSKiv">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinSKiv"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxSkiv"/>
-            </td>
-            <td>
-                <select name="dirSKiv" id="dirSKiv">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinSKiv"/> - <input type="number" id="presMaxSKiv"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="nordKivu" id="nordKivu">
-                    25. Nord-Kivu
-                </label>
-            </td>
-            <td>
-                <select name="phenoNKiv" id="phenoNKiv">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinNKiv"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxNKiv"/>
-            </td>
-            <td>
-                <select name="dirNKiv" id="dirNKiv">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinNKiv"/> - <input type="number" id="presMaxNKiv"/> mm
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label name="ituri" id="ituri">
-                    26. Ituri
-                </label>
-            </td>
-            <td>
-                <select name="phenoItu" id="phenoItu">
-                    <option value="">--Please choose an option--</option>
-                    <option value="cielNuageux">Ciel nuageux avec éclaircis</option>
-                    <option value="oragePluie">Orage avec pluies</option>
-                    <option value="nuagePluie">nuageux avec pluies</option>
-                    <option value="ensoleillé">Ensoleillé</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="tempMinItu"/>
-            </td>
-            <td>
-                <input type="number" id="tempMaxItu"/>
-            </td>
-            <td>
-                <select name="dirItu" id="dirItu">
-                    <option value="">--Please choose an option--</option>
-                    <option value="est">Est</option>
-                    <option value="Ouest">Ouest</option>
-                    <option value="nord">nord</option>
-                    <option value="sud">Sud</option>
-                    <option value="Sud-Est">Sud-Est</option>
-                    <option value="Sud-Ouest">Sud-Ouest</option>
-                    <option value="Nord-Est">Nord-Est</option>
-                    <option value="Nord-Ouest">Nord-Ouest</option>
-                </select>
-            </td>
-            <td>
-                <input type="number" id="presMinItu"/> - <input type="number" id="presMaxItu"/> mm
-            </td>
-        </tr>-->
+            <tr>
+
+            <tr>
+                <td>
+                    <label name="kinshasa" id="kinshasa">
+                        2. Bandundu
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoBan" id="phenoBan">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinBan" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxBan" />
+                </td>
+                <td>
+                    <select name="dirBan" id="dirBan">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" /> - <input type="number" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="hUele" id="hUele">
+                        3. Haut-Uele
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoHUel" id="phenoHUel">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinHUel" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxHUele" />
+                </td>
+                <td>
+                    <select name="dirHUel" id="dirHUel">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinHUel" /> - <input type="number" id="presMaxHUel" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="kongoCentral" id="congoCentral">
+                        4. Kongo Central
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoKCent" id="phenoKCent">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinKCent" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxKCent" />
+                </td>
+                <td>
+                    <select name="dirKCent" id="dirKCent">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinKCent" /> - <input type="number" id="presMaxKCent" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="kwango" id="kwango">
+                        5. Kwango
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoKwa" id="phenoKwa">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinKwa" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxKwa" />
+                </td>
+                <td>
+                    <select name="selectPheno" id="selectPheno">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinKaw" /> - <input type="number" id="presMaxKaw" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="kwilu" id="kwilu">
+                        6. Kwilu
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoKwi" id="pheno6">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinKwi" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxKwi" />
+                </td>
+                <td>
+                    <select name="dirKwi" id="dirKwi">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinKwi" /> - <input type="number" id="presMaxKwi" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="maindombe" id="maindombe">
+                        7. Maindombe
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno7">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinMai" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxMai" />
+                </td>
+                <td>
+                    <select name="dirMai" id="dirMai">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinMai" /> - <input type="number" id="presMaxMai" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="kasai" id="kasai">
+                        8. Kasai
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno8">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinKas" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxKas" />
+                </td>
+                <td>
+                    <select name="dirKas" id="dirKas">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinKas" /> - <input type="number" id="presMaxKas" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="equateur" id="equateur">
+                        9. Equateur
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno9">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinEqua" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxEqua" />
+                </td>
+                <td>
+                    <select name="dirEqua" id="dirEqua">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinEqua" /> - <input type="number" id="presMaxEqua" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="kasaiCentral" id="KasaiCentral">
+                        10. Kasai Central
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoC" id="pheno10">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinKasC" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxKasC" />
+                </td>
+                <td>
+                    <select name="dirKasC" id="dirKasC">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinKasC" /> - <input type="number" id="presMaxKasC" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="sankuru" id="sankuru">
+                        11. Sankuru
+                    </label>
+                </td>
+                <td>
+                    <select name="phenok" id="pheno11">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinSank" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxSank" />
+                </td>
+                <td>
+                    <select name="dirSank" id="dirSank">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinSank" /> - <input type="number" id="presMaxSank" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="tshuapa" id="tshuapa">
+                        12. Tshuapa
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoua" id="pheno12">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinTshua" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxTshua" />
+                </td>
+                <td>
+                    <select name="dirTshua" id="dirTshua">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinTshua" /> - <input type="number" id="presMaxTshua" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="mongala" id="mongala">
+                        13. Mongala
+                    </label>
+                </td>
+                <td>
+                    <select name="phenog" id="pheno13">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinMong" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxMong" />
+                </td>
+                <td>
+                    <select name="dirMong" id="dirMong">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinMong" /> - <input type="number" id="presMaxMong" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="sudUbangi" id="sudUbnagi">
+                        14. Sud Ubangi
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoa" id="pheno14">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinSUba" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxSUba" />
+                </td>
+                <td>
+                    <select name="dirSUba" id="dirSUba">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinSUba" /> - <input type="number" id="presMaxSUba" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="NordUbangi" id="NordUbangi">
+                        15. Nord Ubangi
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoa" id="pheno15">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinNUba" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxNUba" />
+                </td>
+                <td>
+                    <select name="dirNUba" id="dirNUba">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinNUba" /> - <input type="number" id="presMaxNUba" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="basUele" id="basUele">
+                        16. Bas-Uele
+                    </label>
+                </td>
+                <td>
+                    <select name="phenol" id="pheno16">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinBUel" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxBUel" />
+                </td>
+                <td>
+                    <select name="dirBUel" id="dirBUel">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinBUel" /> - <input type="number" id="presMaxBUel" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="tshopo" id="tshopo">
+                        17. Tshopo
+                    </label>
+                </td>
+                <td>
+                    <select name="phenoo" id="pheno17">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinTsho" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxTsho" />
+                </td>
+                <td>
+                    <select name="selectPheno" id="selectPheno">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinTsho" /> - <input type="number" id="presMaxTsho" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="maniema" id="maniema">
+                        18. Maniema
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno18">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinMan" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxMan" />
+                </td>
+                <td>
+                    <select name="dirMan" id="dirMan">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinMan" /> - <input type="number" id="presMaxMan" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="lomamie" id="lomamie">
+                        19. Lomamie
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno19">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinLom" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxLom" />
+                </td>
+                <td>
+                    <select name="dirLom" id="dirLom">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinLom" /> - <input type="number" id="presMaxLom" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="hautLomamie" id="hautLomamie">
+                        20. Haut-Lomamie
+                    </label>
+                </td>
+                <td>
+                    <select name="phenom" id="pheno20">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinHLom" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxHLom" />
+                </td>
+                <td>
+                    <select name="dirHLom" id="dirHLom">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinHLom" /> - <input type="number" id="presMaxHLom" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="lualaba" id="lualaba">
+                        21. Lualaba
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno21">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinLua" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxLua" />
+                </td>
+                <td>
+                    <select name="dirLua" id="dirLua">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinLua" /> - <input type="number" id="presMaxLua" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="hautKatanga" id="hautKatanga">
+                        22. Haut-Katanga
+                    </label>
+                </td>
+                <td>
+                    <select name="phenot" id="pheno22">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinHKat" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxHKat" />
+                </td>
+                <td>
+                    <select name="dirHKat" id="dirHKat">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinHKat" /> - <input type="number" id="presMaxHkat" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="tanganyka" id="tanganyka">
+                        23. Tanganyka
+                    </label>
+                </td>
+                <td>
+                    <select name="phenog" id="pheno23">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinTang" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxTang" />
+                </td>
+                <td>
+                    <select name="dirTang" id="dirTang">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinTang" /> - <input type="number" id="presMaxTang" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="lualaba" id="lualaba">
+                        24. Lualaba
+                    </label>
+                </td>
+                <td>
+                    <select name="phenol" id="pheno24">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinLual" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxLual" />
+                </td>
+                <td>
+                    <select name="dirLual" id="dirLual">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinLual" /> - <input type="number" id="presMaxLual" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="sudKivu" id="sudKivu">
+                        25. Sud-Kivu
+                    </label>
+                </td>
+                <td>
+                    <select name="phenov" id="pheno25">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinSKiv" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxSkiv" />
+                </td>
+                <td>
+                    <select name="dirSKiv" id="dirSKiv">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinSKiv" /> - <input type="number" id="presMaxSKiv" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="nordKivu" id="nordKivu">
+                        25. Nord-Kivu
+                    </label>
+                </td>
+                <td>
+                    <select name="phenov" id="pheno26">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinNKiv" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxNKiv" />
+                </td>
+                <td>
+                    <select name="dirNKiv" id="dirNKiv">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinNKiv" /> - <input type="number" id="presMaxNKiv" /> mm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="ituri" id="ituri">
+                        26. Ituri
+                    </label>
+                </td>
+                <td>
+                    <select name="pheno" id="pheno27">
+                        <option value="">--Please choose an option--</option>
+                        <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
+                        <option value="oragePluie">Orage avec pluies</option>
+                        <option value="nuagePluie">nuageux avec pluies</option>
+                        <option value="ensoleillé">Ensoleillé</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="tempMinItu" />
+                </td>
+                <td>
+                    <input type="number" id="tempMaxItu" />
+                </td>
+                <td>
+                    <select name="dirItu" id="dirItu">
+                        <option value="">--Please choose an option--</option>
+                        <option value="est">Est</option>
+                        <option value="Ouest">Ouest</option>
+                        <option value="nord">nord</option>
+                        <option value="sud">Sud</option>
+                        <option value="Sud-Est">Sud-Est</option>
+                        <option value="Sud-Ouest">Sud-Ouest</option>
+                        <option value="Nord-Est">Nord-Est</option>
+                        <option value="Nord-Ouest">Nord-Ouest</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" id="presMinItu" /> - <input type="number" id="presMaxItu" /> mm
+                </td>
+            </tr>
         </table>
-        <button class="btn btn-primary" id="Envoyer" type="submit">Envoyer</button>
     </form>
     <script src="./jquery.js"></script>
     <script>
@@ -1183,7 +1112,7 @@
             */
             //creation du calque
             var openStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
-                maxZoom: 7,
+                maxZoom: 5,
                 minZoom: 5,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
@@ -1202,7 +1131,7 @@
                 iconUrl: './images/PNG/pluie1.png',
                 shadowUrl: './images/marker-shadow.png',
                 iconSize: [40, 40],
-                shadowSize: [50, 50],
+                shadowSize: [50, 45],
                 iconAnchor: [42, 35],
                 shadowAnchor: [39, 45],
                 popupAnchor: [0, 0]
@@ -1221,9 +1150,9 @@
             var cielGris = L.icon({
                 iconUrl: './images/PNG/cielgris1.png',
                 shadowUrl: './images/marker-shadow.png',
-                iconSize: [40, 40],
-                shadowSize: [50, 50],
-                iconAnchor: [42, 35],
+                iconSize: [40, 25],
+                shadowSize: [40, 40],
+                iconAnchor: [42, 40],
                 shadowAnchor: [39, 45],
                 popupAnchor: [0, 0]
 
@@ -1231,7 +1160,7 @@
             var nuageux = L.icon({
                 iconUrl: './images/PNG/nuageux1.png',
                 shadowUrl: './images/marker-shadow.png',
-                iconSize: [40, 40],
+                iconSize: [50, 35],
                 shadowSize: [50, 50],
                 iconAnchor: [42, 35],
                 shadowAnchor: [39, 45],
@@ -1239,51 +1168,400 @@
 
             });
             //ajout de marker et leurs icons
-            var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).addTo(map);
-            var bandundu = L.marker([-4.984365759943966, 18.810533788896517], { icon: soleil }).addTo(map);
-            var hautUele = L.marker([3.158029, 29.410376], { icon: soleil }).addTo(map);
-            var kongoCentral = L.marker([-5.741355, 14.886933], { icon: soleil }).addTo(map);
-            var kwango = L.marker([-7.378996, 18.701263], { icon: soleil }).addTo(map);
-            var kwilu = L.marker([-3.4828943094735356, 17.516566699193763], { icon: soleil }).addTo(map);
-            var maindombe = L.marker([-3.162522, 19.506401], { icon: soleil }).addTo(map);
-            var kasai = L.marker([-3.759058, 22.071509], { icon: soleil }).addTo(map);
-            var equateur = L.marker([-0.148381, 19.808525], { icon: soleil }).addTo(map);
-            var kasaiCentral = L.marker([-7.323279, 23.082251], { icon: soleil }).addTo(map);
-            var kasaiOriental = L.marker([-6.308785, 23.939185], { icon: soleil }).addTo(map);
-            var sankuru = L.marker([-2.936497, 24.521460], { icon: soleil }).addTo(map);
-            var tshuapa = L.marker([-1.296342, 22.362846], { icon: soleil }).addTo(map);
-            var mongala = L.marker([1.500522, 21.796851], { icon: soleil }).addTo(map);
-            var sudUbangi = L.marker([2.477704, 20.148901], { icon: soleil }).addTo(map);
-            var nordUbangi = L.marker([3.201907, 22.225317], { icon: soleil }).addTo(map);
-            var basUele = L.marker([3.223845, 26.158423], { icon: soleil }).addTo(map);
-            var tshopo = L.marker([-0.029880, 25.984536], { icon: soleil }).addTo(map);
-            var maniema = L.marker([-4.153622, 26.938452], { icon: soleil }).addTo(map);
-            var lomami = L.marker([-6.155886, 25.971655], { icon: soleil }).addTo(map);
-            var hautLomami = L.marker([-8.615554, 26.396717], { icon: soleil }).addTo(map);
-            var lualaba = L.marker([-10.610468, 24.103492], { icon: soleil }).addTo(map);
-            var hautKatanga = L.marker([-11.617903, 28.307737], { icon: soleil }).addTo(map);
-            var tanganyka = L.marker([-5.774244677491197, 29.177237467736163], { icon: soleil }).addTo(map);
-            var sudKivu = L.marker([-3.935566, 28.877739], { icon: soleil }).addTo(map);
-            var nordKivu = L.marker([-1.573144091486702, 29.250535502258046], { icon: soleil }).addTo(map);
-            var ituri = L.marker([1.071038, 30.014824], { icon: soleil }).addTo(map);
+
 
             /*Sauvergarder les données dans une sessionStorage*/
 
             $('#Envoyer').click(function (e) {
-                sessionStorage.setItem('phenoKin', $('#phenoKin').val());
-                sessionStorage.setItem('tempMin', $('#tempMinIn').val());
-                sessionStorage.setItem('tempMax', $('#tempMaxIn').val());
-                sessionStorage.setItem('dirKin', $('#dirKin').val());
-                sessionStorage.setItem('preMin', $('#preMin').val());
-                sessionStorage.setItem('preMax', $('#preMax').val());
+                if ($('#phenoKin').val() !== '') {
+                    sessionStorage.setItem('phenoKin', $('#phenoKin').val());
+                }
+                if ($('#phenoBan').val() !== '') {
+                    sessionStorage.setItem('phenoBan', $('#phenoBan').val());
+                    
+                }if ($('#phenoHUel').val() !== '') {
+                    sessionStorage.setItem('phenoHUel', $('#phenoHUel').val());
+                    
+                }if ($('#phenoKCent').val() !== '') {
+                    sessionStorage.setItem('phenoKCent', $('#phenoKCent').val());
+                    
+                }if ($('#phenoKwa').val() !== '') {
+                    sessionStorage.setItem('phenoKwa', $('#phenoKwa').val());
+                    
+                }if ($('#pheno6').val() !== '') {
+                    sessionStorage.setItem('pheno6', $('#pheno6').val());
+                    
+                }if ($('#pheno7').val() !== '') {
+                    sessionStorage.setItem('pheno7', $('#pheno7').val());
+                    
+                }if ($('#pheno8').val() !== '') {
+                    sessionStorage.setItem('pheno8', $('#pheno8').val());
+                    
+                }if ($('#pheno9').val() !== '') {
+                    sessionStorage.setItem('pheno9', $('#pheno9').val());
+                    
+                }if ($('#pheno10').val() !== '') {
+                    sessionStorage.setItem('pheno10', $('#pheno10').val());
+                    
+                }if ($('#pheno11').val() !== '') {
+                    sessionStorage.setItem('pheno11', $('#pheno11').val());
+                    
+                }if ($('#pheno12').val() !== '') {
+                    sessionStorage.setItem('pheno12', $('#pheno12').val());
+                    
+                }if ($('#pheno13').val() !== '') {
+                    sessionStorage.setItem('pheno13', $('#pheno13').val());
+                    
+                }if ($('#pheno14').val() !== '') {
+                    sessionStorage.setItem('pheno14', $('#pheno14').val());
+                    
+                }if ($('#pheno15').val() !== '') {
+                    sessionStorage.setItem('pheno15', $('#pheno15').val());
+                    
+                }if ($('#pheno16').val() !== '') {
+                    sessionStorage.setItem('pheno16', $('#pheno16').val());
+                    
+                }if ($('#pheno17').val() !== '') {
+                    sessionStorage.setItem('pheno17', $('#pheno17').val());
+                    
+                }if ($('#pheno18').val() !== '') {
+                    sessionStorage.setItem('pheno18', $('#pheno18').val());
+                    
+                }if ($('#pheno19').val() !== '') {
+                    sessionStorage.setItem('pheno19', $('#pheno19').val());
+                    
+                }if ($('#pheno20').val() !== '') {
+                    sessionStorage.setItem('pheno20', $('#pheno20').val());
+                    
+                }if ($('#pheno21').val() !== '') {
+                    sessionStorage.setItem('pheno21', $('#pheno21').val());
+                    
+                }if ($('#pheno22').val() !== '') {
+                    sessionStorage.setItem('pheno22', $('#pheno22').val());
+                    
+                }if ($('#pheno23').val() !== '') {
+                    sessionStorage.setItem('pheno23', $('#pheno23').val());
+                    
+                }if ($('#pheno24').val() !== '') {
+                    sessionStorage.setItem('pheno24', $('#pheno24').val());
+                    
+                }if ($('#pheno25').val() !== '') {
+                    sessionStorage.setItem('pheno25', $('#pheno25').val());
+                    
+                }if ($('#pheno2').val() !== '') {
+                    sessionStorage.setItem('pheno26', $('#pheno26').val());
+                    
+                }if ($('#pheno27').val() !== '') {
+                    sessionStorage.setItem('pheno27', $('#pheno27').val());
+        
+                }
+                    
+                    sessionStorage.setItem('tempMin', $('#tempMinIn').val());
+                    sessionStorage.setItem('tempMax', $('#tempMaxIn').val());
+                    sessionStorage.setItem('dirKin', $('#dirKin').val());
+                    sessionStorage.setItem('preMin', $('#presMinKin').val());
+                    sessionStorage.setItem('preMax', $('#presMaxKin').val());
+                
+
             });
 
-            var pheno = sessionStorage.getItem('phenoKin');
-            var tempMin = sessionStorage.getItem('tempMin');
-            var tempMax = sessionStorage.getItem('tempMax');
-            var dirKin = sessionStorage.getItem('dirKin');
-            var preMin = sessionStorage.getItem('preMin');
-            var preMax = sessionStorage.getItem('preMax');
+            $('#actualiser').on('click', function (e) {
+                e.preventDefault();
+                var pheno = [
+                    sessionStorage.getItem('phenoKin'),
+                    sessionStorage.getItem('phenoBan'),
+                    sessionStorage.getItem('phenoHUel'),
+                    sessionStorage.getItem('phenoKCent'),
+                    sessionStorage.getItem('phenoKwa'),
+                    sessionStorage.getItem('pheno6'),
+                    sessionStorage.getItem('pheno7'),
+                    sessionStorage.getItem('pheno8'),
+                    sessionStorage.getItem('pheno9'),
+                    sessionStorage.getItem('pheno10'),
+                    sessionStorage.getItem('pheno11'),
+                    sessionStorage.getItem('pheno12'),
+                    sessionStorage.getItem('pheno13'),
+                    sessionStorage.getItem('pheno14'),
+                    sessionStorage.getItem('pheno15'),
+                    sessionStorage.getItem('pheno16'),
+                    sessionStorage.getItem('pheno17'),
+                    sessionStorage.getItem('pheno18'),
+                    sessionStorage.getItem('pheno19'),
+                    sessionStorage.getItem('pheno20'),
+                    sessionStorage.getItem('pheno21'),
+                    sessionStorage.getItem('pheno22'),
+                    sessionStorage.getItem('pheno23'),
+                    sessionStorage.getItem('pheno24'),
+                    sessionStorage.getItem('pheno25'),
+                    sessionStorage.getItem('pheno26'),
+                    sessionStorage.getItem('pheno27')
+
+                ];
+
+                const V1 = {
+                    sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }),
+                    nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }),
+                    orages: L.marker([-4.601182592343627, 16.28230698852354], { icon: orage }),
+                    rain: L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }),
+                }
+                const V2 = {
+                    sun: L.marker([-4.984365759943966, 18.810533788896517], { icon: soleil }),
+                    nuages: L.marker([-4.984365759943966, 18.810533788896517], { icon: nuageux }),
+                    orages: L.marker([-4.984365759943966, 18.810533788896517], { icon: orage }),
+                    rain: L.marker([-4.984365759943966, 18.810533788896517], { icon: pluie }),
+                };
+                const V3 = {
+                    sun: L.marker([3.158029, 29.410376], { icon: soleil }),
+                    nuages: L.marker([3.158029, 29.410376], { icon: nuageux }),
+                    orages: L.marker([3.158029, 29.410376], { icon: orage }),
+                    rain: L.marker([3.158029, 29.410376], { icon: pluie }),
+                };
+                const V4 = {
+                    sun: L.marker([-5.741355, 14.886933], { icon: soleil }),
+                    nuages: L.marker([-5.741355, 14.886933], { icon: nuageux }),
+                    orages: L.marker([-5.741355, 14.886933], { icon: orage }),
+                    rain: L.marker([-5.741355, 14.886933], { icon: pluie }),
+                };
+                const V5 = {
+                    sun: L.marker([-7.378996, 18.701263], { icon: soleil }),
+                    nuages: L.marker([-7.378996, 18.701263], { icon: nuageux }),
+                    orages: L.marker([-7.378996, 18.701263], { icon: orage }),
+                    rain: L.marker([-7.378996, 18.701263], { icon: pluie }),
+                };
+                const V6 = {
+                    sun: L.marker([-3.4828943094735356, 17.516566699193763], { icon: soleil }),
+                    nuages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: nuageux }),
+                    orages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: orage }),
+                    rain: L.marker([-3.4828943094735356, 17.516566699193763], { icon: pluie }),
+                };
+                const V7 = {
+                    sun: L.marker([-3.162522, 19.506401], { icon: soleil }),
+                    nuages: L.marker([-3.162522, 19.506401], { icon: nuageux }),
+                    orages: L.marker([-3.162522, 19.506401], { icon: orage }),
+                    rain: L.marker([-3.162522, 19.506401], { icon: pluie }),
+                };
+                const V8 = {
+                    sun: L.marker([-3.759058, 22.071509], { icon: soleil }),
+                    nuages: L.marker([-3.759058, 22.071509], { icon: nuageux }),
+                    orages: L.marker([-3.759058, 22.071509], { icon: orage }),
+                    rain: L.marker([-3.759058, 22.071509], { icon: pluie }),
+                };
+                const V9 = {
+                    sun: L.marker([-0.148381, 19.80852], { icon: soleil }),
+                    nuages: L.marker([-0.148381, 19.80852], { icon: nuageux }),
+                    orages: L.marker([-0.148381, 19.80852], { icon: orage }),
+                    rain: L.marker([-0.148381, 19.80852], { icon: pluie }),
+                };
+                const V10 = {
+                    sun: L.marker([-7.323279, 23.082251], { icon: soleil }),
+                    nuages: L.marker([-7.323279, 23.082251], { icon: nuageux }),
+                    orages: L.marker([-7.323279, 23.082251], { icon: orage }),
+                    rain: L.marker([-7.323279, 23.082251], { icon: pluie }),
+                };
+                const V11 = {
+                    sun: L.marker([-6.308785, 23.939185], { icon: soleil }),
+                    nuages: L.marker([-6.308785, 23.939185], { icon: nuageux }),
+                    orages: L.marker([-6.308785, 23.939185], { icon: orage }),
+                    rain: L.marker([-6.308785, 23.939185], { icon: pluie }),
+                };
+                const V12 = {
+                    sun: L.marker([-2.936497, 24.521460], { icon: soleil }),
+                    nuages: L.marker([-2.936497, 24.521460], { icon: nuageux }),
+                    orages: L.marker([-2.936497, 24.521460], { icon: orage }),
+                    rain: L.marker([-2.936497, 24.521460], { icon: pluie }),
+                };
+                const V13 = {
+                    sun: L.marker([-1.296342, 22.362846], { icon: soleil }),
+                    nuages: L.marker([-1.296342, 22.362846], { icon: nuageux }),
+                    orages: L.marker([-1.296342, 22.362846], { icon: orage }),
+                    rain: L.marker([-1.296342, 22.362846], { icon: pluie }),
+                };
+                const V14 = {
+                    sun: L.marker([1.500522, 21.796851], { icon: soleil }),
+                    nuages: L.marker([1.500522, 21.796851], { icon: nuageux }),
+                    orages: L.marker([1.500522, 21.796851], { icon: orage }),
+                    rain: L.marker([1.500522, 21.796851], { icon: pluie }),
+                };
+                const V15 = {
+                    sun: L.marker([2.477704, 20.148901], { icon: soleil }),
+                    nuages: L.marker([2.477704, 20.148901], { icon: nuageux }),
+                    orages: L.marker([2.477704, 20.148901], { icon: orage }),
+                    rain: L.marker([2.477704, 20.148901], { icon: pluie }),
+                };
+                const V16 = {
+                    sun: L.marker([3.201907, 22.225317], { icon: soleil }),
+                    nuages: L.marker([3.201907, 22.225317], { icon: nuageux }),
+                    orages: L.marker([3.201907, 22.225317], { icon: orage }),
+                    rain: L.marker([3.201907, 22.225317], { icon: pluie }),
+                };
+                const V17 = {
+                    sun: L.marker([3.223845, 26.158423], { icon: soleil }),
+                    nuages: L.marker([3.223845, 26.158423], { icon: nuageux }),
+                    orages: L.marker([3.223845, 26.158423], { icon: orage }),
+                    rain: L.marker([3.223845, 26.158423], { icon: pluie }),
+                };
+                const V18 = {
+                    sun: L.marker([-0.029880, 25.984536], { icon: soleil }),
+                    nuages: L.marker([-0.029880, 25.984536], { icon: nuageux }),
+                    orages: L.marker([-0.029880, 25.984536], { icon: orage }),
+                    rain: L.marker([-0.029880, 25.984536], { icon: pluie }),
+                };
+                const V19 = {
+                    sun: L.marker([-4.153622, 26.938452], { icon: soleil }),
+                    nuages: L.marker([-4.153622, 26.938452], { icon: nuageux }),
+                    orages: L.marker([-4.153622, 26.938452], { icon: orage }),
+                    rain: L.marker([-4.153622, 26.938452], { icon: pluie }),
+                };
+                const V20 = {
+                    sun: L.marker([-6.155886, 25.971655], { icon: soleil }),
+                    nuages: L.marker([-6.155886, 25.971655], { icon: nuageux }),
+                    orages: L.marker([-6.155886, 25.971655], { icon: orage }),
+                    rain: L.marker([-6.155886, 25.971655], { icon: pluie }),
+                };
+                const V21 = {
+                    sun: L.marker([-8.615554, 26.396717], { icon: soleil }),
+                    nuages: L.marker([-8.615554, 26.396717], { icon: nuageux }),
+                    orages: L.marker([-8.615554, 26.396717], { icon: orage }),
+                    rain: L.marker([-8.615554, 26.396717], { icon: pluie }),
+                };
+                const V22 = {
+                    sun: L.marker([-10.610468, 24.103492], { icon: soleil }),
+                    nuages: L.marker([-10.610468, 24.103492], { icon: nuageux }),
+                    orages: L.marker([-10.610468, 24.103492], { icon: orage }),
+                    rain: L.marker([-10.610468, 24.103492], { icon: pluie }),
+                };
+                const V23 = {
+                    sun: L.marker([-11.617903, 28.307737], { icon: soleil }),
+                    nuages: L.marker([-11.617903, 28.307737], { icon: nuageux }),
+                    orages: L.marker([-11.617903, 28.307737], { icon: orage }),
+                    rain: L.marker([-11.617903, 28.307737], { icon: pluie }),
+                };
+                const V24 = {
+                    sun: L.marker([-5.774244677491197, 29.177237467736163], { icon: soleil }),
+                    nuages: L.marker([-5.774244677491197, 29.177237467736163], { icon: nuageux }),
+                    orages: L.marker([-5.774244677491197, 29.177237467736163], { icon: orage }),
+                    rain: L.marker([-5.774244677491197, 29.177237467736163], { icon: pluie }),
+                };
+                const V25 = {
+                    sun: L.marker([-3.935566, 28.877739], { icon: soleil }),
+                    nuages: L.marker([-3.935566, 28.877739], { icon: nuageux }),
+                    orages: L.marker([-3.935566, 28.877739], { icon: orage }),
+                    rain: L.marker([-3.935566, 28.877739], { icon: pluie }),
+                };
+                const V26 = {
+                    sun: L.marker([-1.573144091486702, 29.250535502258046], { icon: soleil }),
+                    nuages: L.marker([-1.573144091486702, 29.250535502258046], { icon: nuageux }),
+                    orages: L.marker([-1.573144091486702, 29.250535502258046], { icon: orage }),
+                    rain: L.marker([-1.573144091486702, 29.250535502258046], { icon: pluie }),
+                };
+                const V27 = {
+                    sun: L.marker([1.071038, 30.014824], { icon: soleil }),
+                    nuages: L.marker([1.071038, 30.014824], { icon: nuageux }),
+                    orages: L.marker([1.071038, 30.014824], { icon: orage }),
+                    rain: L.marker([1.071038, 30.014824], { icon: pluie }),
+                };
+
+                const ville = [
+                    V1,
+                    V2,
+                    V3,
+                    V4,
+                    V5,
+                    V6,
+                    V7,
+                    V8,
+                    V9,
+                    V10,
+                    V11,
+                    V12,
+                    V13,
+                    V14,
+                    V15,
+                    V16,
+                    V17,
+                    V18,
+                    V19,
+                    V20,
+                    V21,
+                    V22,
+                    V23,
+                    V24,
+                    V25,
+                    V26,
+                    V27
+                ]
+                for (let index = 0; index < pheno.length; index++) {
+                    if (pheno[index] === "ensoleillé") {
+                        ville[index].sun.addTo(map);
+                    } else if (pheno[index] === "cielNuageux") {
+                        ville[index].nuages.addTo(map);
+                    } else if (pheno[index] === "oragePluie") {
+                        ville[index].orages.addTo(map);
+                    } else if (pheno[index] === "nuagePluie") {
+                        ville[index].rain.addTo(map);
+                    }
+
+                }
+
+                /*var kinshasa = L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }).addTo(map);
+                var bandundu = L.marker([-4.984365759943966, 18.810533788896517], { icon: pluie }).addTo(map);
+                var hautUele = L.marker([3.158029, 29.410376], { icon: pluie }).addTo(map);
+                var kongoCentral = L.marker([-5.741355, 14.886933], { icon: pluie }).addTo(map);
+                var kwango = L.marker([-7.378996, 18.701263], { icon: pluie }).addTo(map);
+                var kwilu = L.marker([-3.4828943094735356, 17.516566699193763], { icon: pluie }).addTo(map);
+                var maindombe = L.marker([-3.162522, 19.506401], { icon: pluie }).addTo(map);
+                var kasai = L.marker([-3.759058, 22.071509], { icon: pluie }).addTo(map);
+                var equateur = L.marker([-0.148381, 19.808525], { icon: pluie }).addTo(map);
+                var kasaiCentral = L.marker([-7.323279, 23.082251], { icon: pluie }).addTo(map);
+                var kasaiOriental = L.marker([-6.308785, 23.939185], { icon: pluie }).addTo(map);
+                var sankuru = L.marker([-2.936497, 24.521460], { icon: pluie }).addTo(map);
+                var tshuapa = L.marker([-1.296342, 22.362846], { icon: pluie }).addTo(map);
+                var mongala = L.marker([1.500522, 21.796851], { icon: pluie }).addTo(map);
+                var sudUbangi = L.marker([2.477704, 20.148901], { icon: pluie }).addTo(map);
+                var nordUbangi = L.marker([3.201907, 22.225317], { icon: pluie }).addTo(map);
+                var basUele = L.marker([3.223845, 26.158423], { icon: pluie }).addTo(map);
+                var tshopo = L.marker([-0.029880, 25.984536], { icon: pluie }).addTo(map);
+                var maniema = L.marker([-4.153622, 26.938452], { icon: pluie }).addTo(map);
+                var lomami = L.marker([-6.155886, 25.971655], { icon: pluie }).addTo(map);
+                var hautLomami = L.marker([-8.615554, 26.396717], { icon: pluie }).addTo(map);
+                var lualaba = L.marker([-10.610468, 24.103492], { icon: pluie }).addTo(map);
+                var hautKatanga = L.marker([-11.617903, 28.307737], { icon: pluie }).addTo(map);
+                var tanganyka = L.marker([-5.774244677491197, 29.177237467736163], { icon: pluie }).addTo(map);
+                var sudKivu = L.marker([-3.935566, 28.877739], { icon: pluie }).addTo(map);
+                var nordKivu = L.marker([-1.573144091486702, 29.250535502258046], { icon: pluie }).addTo(map);
+                var ituri = L.marker([1.071038, 30.014824], { icon: pluie }).addTo(map);*/
+
+            });
+            console.log(sessionStorage.getItem('phenoKin'));
+            console.log(sessionStorage.getItem('phenoBan'));
+            console.log(sessionStorage.getItem('phenoHUel'));
+            console.log(sessionStorage.getItem('phenoKCent'));
+            console.log(sessionStorage.getItem('phenoKwa'));
+            console.log(sessionStorage.getItem('pheno6'));
+            console.log(sessionStorage.getItem('pheno7'));
+            console.log(sessionStorage.getItem('pheno8'));
+            console.log(sessionStorage.getItem('pheno9'));
+            console.log(sessionStorage.getItem('pheno10'));
+            console.log(sessionStorage.getItem('pheno11'));
+            console.log(sessionStorage.getItem('pheno12'));
+            console.log(sessionStorage.getItem('pheno13'));
+            console.log(sessionStorage.getItem('pheno14'));
+            console.log(sessionStorage.getItem('pheno15'));
+            console.log(sessionStorage.getItem('pheno16'));
+            console.log(sessionStorage.getItem('pheno17'));
+            console.log(sessionStorage.getItem('pheno18'));
+            console.log(sessionStorage.getItem('pheno19'));
+            console.log(sessionStorage.getItem('pheno20'));
+            console.log(sessionStorage.getItem('pheno21'));
+            console.log(sessionStorage.getItem('pheno22'));
+            console.log(sessionStorage.getItem('pheno23'));
+            console.log(sessionStorage.getItem('pheno24'));
+            console.log(sessionStorage.getItem('pheno25'));
+            console.log(sessionStorage.getItem('pheno26'));
+            console.log(sessionStorage.getItem('pheno27'));
+
+
+
         })
     </script>
 </body>
