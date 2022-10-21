@@ -101,8 +101,10 @@
                 </td>
             </tr>
             <tr>
+
+            <tr>
                 <td>
-                    <label name="bandundu" id="bandundu">
+                    <label name="kinshasa" id="kinshasa">
                         2. Bandundu
                     </label>
                 </td>
@@ -1165,6 +1167,9 @@
                 popupAnchor: [0, 0]
 
             });
+            var pop = L.popup({
+                offset: (42,35)
+            })
             //ajout de marker et leurs icons
 
 
@@ -1254,11 +1259,13 @@
         
                 }
                     
+                /* recuperation des informations temperatures et directions du vent pour kinshasa uniquement */
                     sessionStorage.setItem('tempMin', $('#tempMinIn').val());
                     sessionStorage.setItem('tempMax', $('#tempMaxIn').val());
-                    sessionStorage.setItem('dirKin', $('#dirKin').val());
+                    sessionStorage.setItem('dirKin', $('#dirKin').val()); 
                     sessionStorage.setItem('preMin', $('#presMinKin').val());
                     sessionStorage.setItem('preMax', $('#presMaxKin').val());
+                /* recuperation des informations temperatures et directions du vent pour kinshasa uniquement */
                 
 
             });
@@ -1297,10 +1304,10 @@
                 ];
 
                 const V1 = {
-                    sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }),
-                    nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }),
-                    orages: L.marker([-4.601182592343627, 16.28230698852354], { icon: orage }),
-                    rain: L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }),
+                    sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup("Soleil"),
+                    nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }).bindPopup("nuage"),
+                    orages: L.marker([-4.601182592343627, 16.28230698852354], { icon: orage }).bindPopup("orage"),
+                    rain: L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }).bindPopup("pluie"),
                 }
                 const V2 = {
                     sun: L.marker([-4.984365759943966, 18.810533788896517], { icon: soleil }),
