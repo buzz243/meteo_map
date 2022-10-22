@@ -159,7 +159,7 @@
                     <input type="number" id="tempMinHUel" />
                 </td>
                 <td>
-                    <input type="number" id="tempMaxHUele" />
+                    <input type="number" id="tempMaxHUel" />
                 </td>
                 <td>
                     <select name="dirHUel" id="dirHUel">
@@ -1293,10 +1293,10 @@
                     sessionStorage.setItem('tempMinItu', $('#tempMinItu').val());
                     sessionStorage.setItem('tempMaxItu', $('#tempMaxItu').val());
                     
-                }if ($('#pheno27').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
+                }if ($('#pheno27').val() || $('#tempMinItu').val() || $('#tempMaxItu').val() !== '') {
                     sessionStorage.setItem('pheno27', $('#pheno27').val());
-                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
-                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
+                    sessionStorage.setItem('tempMinItu', $('#tempMinItu').val());
+                    sessionStorage.setItem('tempMaxItu', $('#tempMaxItu').val());
         
                 }
                     
@@ -2334,32 +2334,40 @@
                         ),
                 };
                 const V27 = {
-                    sun: L.marker([1.071038, 30.014824], { icon: soleil }).bindPopup(
+                    sun: L.marker([-1.573144091486702, 29.250535502258046], { icon: soleil }).bindPopup(
                         '<center>'+
-                        "Kinshasa "+ '<br/>' +
-                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<p id="ville">Ituri</p>'+ 
+                        '<p><img src="./images/PNG/soleil1.png" alt="logo icon" /></p>'+
+                        '<p id="libele">Ensoleillé</p>'+
+                        '<p> Min : <span id="temps">'+sessionStorage.getItem('tempMinItu')+'</span>'+
+                        '  Max : <span id="temps">'+sessionStorage.getItem('tempMaxItu')+'</span></p>'+
                         '<center/>'
                         ),
-                    nuages: L.marker([1.071038, 30.014824], { icon: nuageux }).bindPopup(
+                    nuages: L.marker([-1.573144091486702, 29.250535502258046], { icon: nuageux }).bindPopup(
                         '<center>'+
-                        "Kinshasa "+ '<br/>' +
-                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<p id="ville">Ituri</p>'+ 
+                        '<p><img src="./images/PNG/nuageux1.png" alt="logo icon" /></p>'+
+                        '<p id="libele">Nuageux</p>'+
+                        '<p> Min : <span id="temps">'+sessionStorage.getItem('tempMinItu')+'</span>'+
+                        '  Max : <span id="temps">'+sessionStorage.getItem('tempMaxItu')+'</span></p>'+
                         '<center/>'
                         ),
-                    orages: L.marker([1.071038, 30.014824], { icon: orage }).bindPopup(
+                    orages: L.marker([-1.573144091486702, 29.250535502258046], { icon: orage }).bindPopup(
                         '<center>'+
-                        "Kinshasa "+ '<br/>' +
-                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<p id="ville">Ituri</p>'+ 
+                        '<p><img src="./images/PNG/orage1.png" alt="logo icon" /></p>'+
+                        '<p id="libele">Orage avec pluie</p>'+
+                        '<p> Min : <span id="temps">'+sessionStorage.getItem('tempMinItu')+'</span>'+
+                        '  Max : <span id="temps">'+sessionStorage.getItem('tempMaxItu')+'</span></p>'+
                         '<center/>'
                         ),
-                    rain: L.marker([1.071038, 30.014824], { icon: pluie }).bindPopup(
+                    rain: L.marker([-1.573144091486702, 29.250535502258046], { icon: pluie }).bindPopup(
                         '<center>'+
-                        "Kinshasa "+ '<br/>' +
-                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<p id="ville">Ituri</p>'+ 
+                        '<p><img src="./images/PNG/pluie1.png" alt="logo icon" /></p>'+
+                        '<p id="libele">Pluie</p>'+
+                        '<p> Min : <span id="temps">'+sessionStorage.getItem('tempMinItu')+'</span>'+
+                        '  Max : <span id="temps">'+sessionStorage.getItem('tempMaxItu')+'</span></p>'+
                         '<center/>'
                         ),
                 };
