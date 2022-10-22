@@ -28,6 +28,18 @@ caption{
 button{
     align-items: center;
 }
+/*gestion de popup*/
 center{
-    color:green;
+    color:black;
+}
+#libele{
+    font-weight: bold;
+}
+#ville{
+    color:#3F84B8;
+    font-weight:bold;
+}
+#temps{
+    color:#3F84B8;
+    font-weight:bold;
 }

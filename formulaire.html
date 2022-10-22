@@ -1347,10 +1347,12 @@
                 const V1 = {
                     sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup(
                         '<center>'+
-                        "Kinshasa"+'<br/>' + 
-                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxKin')+
-                        '<center/>'
+                        '<p id="ville">Kinshasa</p>'+ 
+                        '<p><img src="./images/PNG/soleil1.png" alt="logo icon" /></p>'+
+                        '<p id="libele">Ensoleillé</p>'+
+                        '<p> Min : <span id="temps">'+sessionStorage.getItem('tempMinKin')+'</span>'+
+                        '  Max : <span id="temps">'+sessionStorage.getItem('tempMaxKin')+'<span/></p>'+
+                        '</center>'
                         ),
                     nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }).bindPopup(
                         '<center>'+
@@ -1423,14 +1425,14 @@
                         '<center>'+
                         "Haut-Uele"+ '<br/>' +
                         "Min : "+sessionStorage.getItem('tempMinHUel')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxHuel')+
+                        "Max : "+sessionStorage.getItem('tempMaxHUel')+
                         '<center/>'
                         ),
                     rain: L.marker([3.158029, 29.410376], { icon: pluie }).bindPopup(
                         '<center>'+
                         "Haut-Uele"+ '<br/>' +
-                        "Min : "+sessionStorage.getItem('tempMinHuel')+"  "+
-                        "Max : "+sessionStorage.getItem('tempMaxHuel')+
+                        "Min : "+sessionStorage.getItem('tempMinHUel')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxHUel')+
                         '<center/>'
                         ),
                 };
