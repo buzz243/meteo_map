@@ -78,10 +78,10 @@
                     </select>
                 </td>
                 <td>
-                    <input type="number" name="tempMinIn" id="tempMinIn" />
+                    <input type="number" name="tempMinKin" id="tempMinKin" />
                 </td>
                 <td>
-                    <input type="number" name="tempMaxIn" id="tempMaxIn" />
+                    <input type="number" name="tempMaxKin" id="tempMaxKin" />
                 </td>
                 <td>
                     <select name="dirKin" id="dirKin">
@@ -679,7 +679,7 @@
                     </label>
                 </td>
                 <td>
-                    <select name="phenoo" id="pheno17">
+                    <select name="pheno17" id="pheno17">
                         <option value="">--Please choose an option--</option>
                         <option value="cielNuageux">Ciel nuageux avec eclaircis</option>
                         <option value="oragePluie">Orage avec pluies</option>
@@ -1176,86 +1176,141 @@
             /*Sauvergarder les données dans une sessionStorage*/
 
             $('#Envoyer').click(function (e) {
-                if ($('#phenoKin').val() !== '') {
+                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('phenoKin', $('#phenoKin').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                 }
-                if ($('#phenoBan').val() !== '') {
+                if ($('#phenoBan').val() || $('#tempMinBan').val() || $('#tempMaxBan').val() !== '') {
                     sessionStorage.setItem('phenoBan', $('#phenoBan').val());
+                    sessionStorage.setItem('tempMinBan', $('#tempMinBan').val());
+                    sessionStorage.setItem('tempMaxBan', $('#tempMaxBan').val());
                     
-                }if ($('#phenoHUel').val() !== '') {
+                }if ($('#phenoHUel').val() || $('#tempMinHUel').val() || $('#tempMaxHUel').val() !== '') {
                     sessionStorage.setItem('phenoHUel', $('#phenoHUel').val());
+                    sessionStorage.setItem('tempMinHUel', $('#tempMinHUel').val());
+                    sessionStorage.setItem('tempMaxHUel', $('#tempMaxHUel').val());
                     
-                }if ($('#phenoKCent').val() !== '') {
+                }if ($('#phenoKCent').val() || $('#tempMinKCent').val() || $('#tempMaxKCent').val() !== '') {
                     sessionStorage.setItem('phenoKCent', $('#phenoKCent').val());
+                    sessionStorage.setItem('tempMinKCent', $('#tempMinKCent').val());
+                    sessionStorage.setItem('tempMaxKCent', $('#tempMaxKCent').val());
                     
-                }if ($('#phenoKwa').val() !== '') {
+                }if ($('#phenoKwa').val() || $('#tempMinKwa').val() || $('#tempMaxKwa').val() !== '') {
                     sessionStorage.setItem('phenoKwa', $('#phenoKwa').val());
+                    sessionStorage.setItem('tempMinKwa', $('#tempMinKwa').val());
+                    sessionStorage.setItem('tempMaxKwa', $('#tempMaxKwa').val());
                     
-                }if ($('#pheno6').val() !== '') {
+                }if ($('#pheno6').val() || $('#tempMinKwi').val() || $('#tempMaxKwi').val() !== '') {
                     sessionStorage.setItem('pheno6', $('#pheno6').val());
+                    sessionStorage.setItem('tempMinKwi', $('#tempMinKwi').val());
+                    sessionStorage.setItem('tempMaxKwi', $('#tempMaxKwi').val());
                     
-                }if ($('#pheno7').val() !== '') {
+                }if ($('#pheno7').val() || $('#tempMinMai').val() || $('#tempMaxMai').val() !== '') {
                     sessionStorage.setItem('pheno7', $('#pheno7').val());
+                    sessionStorage.setItem('tempMinMai', $('#tempMinMai').val());
+                    sessionStorage.setItem('tempMaxMai', $('#tempMaxMai').val());
                     
-                }if ($('#pheno8').val() !== '') {
+                }if ($('#pheno8').val() || $('#tempMinKas').val() || $('#tempMaxKas').val() !== '') {
                     sessionStorage.setItem('pheno8', $('#pheno8').val());
+                    sessionStorage.setItem('tempMinKas', $('#tempMinKas').val());
+                    sessionStorage.setItem('tempMaxKas', $('#tempMaxKas').val());
                     
-                }if ($('#pheno9').val() !== '') {
+                }if ($('#pheno9').val() || $('#tempMinEqua').val() || $('#tempMaxEqua').val() !== '') {
                     sessionStorage.setItem('pheno9', $('#pheno9').val());
+                    sessionStorage.setItem('tempMinEqua', $('#tempMinEqua').val());
+                    sessionStorage.setItem('tempMaxEqua', $('#tempMaxEqua').val());
                     
-                }if ($('#pheno10').val() !== '') {
+                }if ($('#pheno10').val() || $('#tempMinKasC').val() || $('#tempMaxKasC').val() !== '') {
                     sessionStorage.setItem('pheno10', $('#pheno10').val());
+                    sessionStorage.setItem('tempMinKasC', $('#tempMinKasC').val());
+                    sessionStorage.setItem('tempMaxKasC', $('#tempMaxKasC').val());
                     
-                }if ($('#pheno11').val() !== '') {
+                }if ($('#pheno11').val() || $('#tempMinSank').val() || $('#tempMaxSank').val() !== '') {
                     sessionStorage.setItem('pheno11', $('#pheno11').val());
+                    sessionStorage.setItem('tempMinSank', $('#tempMinSank').val());
+                    sessionStorage.setItem('tempMaxSank', $('#tempMaxSank').val());
                     
-                }if ($('#pheno12').val() !== '') {
+                }if ($('#pheno12').val() || $('#tempMinTshua').val() || $('#tempMaxTshua').val() !== '') {
                     sessionStorage.setItem('pheno12', $('#pheno12').val());
-                    
-                }if ($('#pheno13').val() !== '') {
+                    sessionStorage.setItem('tempMinTshua', $('#tempMinTshua').val());
+                    sessionStorage.setItem('tempMaxTshua', $('#tempMaxTshua').val());
+
+                }if ($('#pheno13').val() || $('#tempMinMong').val() || $('#tempMaxMong').val() !== '') {
                     sessionStorage.setItem('pheno13', $('#pheno13').val());
+                    sessionStorage.setItem('tempMinMong', $('#tempMinMong').val());
+                    sessionStorage.setItem('tempMaxMong', $('#tempMaxMong').val());
                     
-                }if ($('#pheno14').val() !== '') {
+                }if ($('#pheno14').val() || $('#tempMinSUba').val() || $('#tempMaxSUba').val() !== '') {
                     sessionStorage.setItem('pheno14', $('#pheno14').val());
+                    sessionStorage.setItem('tempMinSUba', $('#tempMinSUba').val());
+                    sessionStorage.setItem('tempMaxSUba', $('#tempMaxSUba').val());
                     
-                }if ($('#pheno15').val() !== '') {
+                }if ($('#pheno15').val() || $('#tempMinNUba').val() || $('#tempMaxNUba').val() !== '') {
                     sessionStorage.setItem('pheno15', $('#pheno15').val());
+                    sessionStorage.setItem('tempMinNUba', $('#tempMinNUba').val());
+                    sessionStorage.setItem('tempMaxNUba', $('#tempMaxNUba').val());
                     
-                }if ($('#pheno16').val() !== '') {
+                }if ($('#pheno16').val() || $('#tempMinBUel').val() || $('#tempMaxBUel').val() !== '') {
                     sessionStorage.setItem('pheno16', $('#pheno16').val());
+                    sessionStorage.setItem('tempMinBUel', $('#tempMinBUel').val());
+                    sessionStorage.setItem('tempMaxBUel', $('#tempMaxBUel').val());
                     
-                }if ($('#pheno17').val() !== '') {
+                }if ($('#pheno17').val() || $('#tempMinTsho').val() || $('#tempMaxTsho').val() !== '') {
                     sessionStorage.setItem('pheno17', $('#pheno17').val());
+                    sessionStorage.setItem('tempMinTsho', $('#tempMinTsho').val());
+                    sessionStorage.setItem('tempMaxTsho', $('#tempMaxTsho').val());
                     
-                }if ($('#pheno18').val() !== '') {
+                }if ($('#pheno18').val() || $('#tempMinMan').val() || $('#tempMaxMan').val() !== '') {
                     sessionStorage.setItem('pheno18', $('#pheno18').val());
+                    sessionStorage.setItem('tempMinMan', $('#tempMinMan').val());
+                    sessionStorage.setItem('tempMaxMan', $('#tempMaxMan').val());
                     
-                }if ($('#pheno19').val() !== '') {
+                }if ($('#pheno19').val() || $('#tempMinLom').val() || $('#tempMaxLom').val() !== '') {
                     sessionStorage.setItem('pheno19', $('#pheno19').val());
+                    sessionStorage.setItem('tempMinLom', $('#tempMinLom').val());
+                    sessionStorage.setItem('tempMaxLom', $('#tempMaxLom').val());
+
                     
-                }if ($('#pheno20').val() !== '') {
+                }if ($('#pheno20').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno20', $('#pheno20').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno21').val() !== '') {
+                }if ($('#pheno21').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno21', $('#pheno21').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno22').val() !== '') {
+                }if ($('#pheno22').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno22', $('#pheno22').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno23').val() !== '') {
+                }if ($('#pheno23').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno23', $('#pheno23').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno24').val() !== '') {
+                }if ($('#pheno24').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno24', $('#pheno24').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno25').val() !== '') {
+                }if ($('#pheno25').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno25', $('#pheno25').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno2').val() !== '') {
+                }if ($('#pheno22').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno26', $('#pheno26').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
                     
-                }if ($('#pheno27').val() !== '') {
+                }if ($('#pheno27').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('pheno27', $('#pheno27').val());
+                    sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
+                    sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
         
                 }
                     
@@ -1302,168 +1357,816 @@
                     sessionStorage.getItem('pheno27')
 
                 ];
-
+                
                 const V1 = {
-                    sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup("Soleil"),
-                    nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }).bindPopup("nuage"),
-                    orages: L.marker([-4.601182592343627, 16.28230698852354], { icon: orage }).bindPopup("orage"),
-                    rain: L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }).bindPopup("pluie"),
+                    sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa"+'<br/>' + 
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-4.601182592343627, 16.28230698852354], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa"+'<br/>'+
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-4.601182592343627, 16.28230698852354], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinsahsa"+'<br/>'+
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-4.601182592343627, 16.28230698852354], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 }
                 const V2 = {
-                    sun: L.marker([-4.984365759943966, 18.810533788896517], { icon: soleil }),
-                    nuages: L.marker([-4.984365759943966, 18.810533788896517], { icon: nuageux }),
-                    orages: L.marker([-4.984365759943966, 18.810533788896517], { icon: orage }),
-                    rain: L.marker([-4.984365759943966, 18.810533788896517], { icon: pluie }),
+                    sun: L.marker([-4.984365759943966, 18.810533788896517], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Bandundu "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinBan')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxBan')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-4.984365759943966, 18.810533788896517], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Bandundu "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinBan')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxBan')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-4.984365759943966, 18.810533788896517], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Bandundu "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinBan')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxBan')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-4.984365759943966, 18.810533788896517], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Bandundu "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinBan')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxBan')+
+                        '<center/>'
+                        ),
                 };
                 const V3 = {
-                    sun: L.marker([3.158029, 29.410376], { icon: soleil }),
-                    nuages: L.marker([3.158029, 29.410376], { icon: nuageux }),
-                    orages: L.marker([3.158029, 29.410376], { icon: orage }),
-                    rain: L.marker([3.158029, 29.410376], { icon: pluie }),
+                    sun: L.marker([3.158029, 29.410376], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Haut-Uele"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinHUel')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxHUel')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([3.158029, 29.410376], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Haut-Uele"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinHUel')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxHUel')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([3.158029, 29.410376], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Haut-Uele"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinHUel')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxHuel')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([3.158029, 29.410376], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Haut-Uele"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinHuel')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxHuel')+
+                        '<center/>'
+                        ),
                 };
                 const V4 = {
-                    sun: L.marker([-5.741355, 14.886933], { icon: soleil }),
-                    nuages: L.marker([-5.741355, 14.886933], { icon: nuageux }),
-                    orages: L.marker([-5.741355, 14.886933], { icon: orage }),
-                    rain: L.marker([-5.741355, 14.886933], { icon: pluie }),
+                    sun: L.marker([-5.741355, 14.886933], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kongo Central"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKCent')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKCent')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-5.741355, 14.886933], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kongo Central"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKCent')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKCent')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-5.741355, 14.886933], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kongo Central"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKCent')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKCent')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-5.741355, 14.886933], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kongo Central"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKCent')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKCent')+
+                        '<center/>'
+                        ),
                 };
                 const V5 = {
-                    sun: L.marker([-7.378996, 18.701263], { icon: soleil }),
-                    nuages: L.marker([-7.378996, 18.701263], { icon: nuageux }),
-                    orages: L.marker([-7.378996, 18.701263], { icon: orage }),
-                    rain: L.marker([-7.378996, 18.701263], { icon: pluie }),
+                    sun: L.marker([-7.378996, 18.701263], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kwango"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwa')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwa')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-7.378996, 18.701263], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kwango"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwa')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwa')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-7.378996, 18.701263], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kwango"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwa')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwa')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-7.378996, 18.701263], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kwango"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwa')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwa')+
+                        '<center/>'
+                        ),
                 };
                 const V6 = {
-                    sun: L.marker([-3.4828943094735356, 17.516566699193763], { icon: soleil }),
-                    nuages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: nuageux }),
-                    orages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: orage }),
-                    rain: L.marker([-3.4828943094735356, 17.516566699193763], { icon: pluie }),
+                    sun: L.marker([-3.4828943094735356, 17.516566699193763], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kwilu"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwi')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwi')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kwilu"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwi')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwi')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-3.4828943094735356, 17.516566699193763], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kwilu"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwi')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwi')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-3.4828943094735356, 17.516566699193763], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kwilu"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKwi')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKwi')+
+                        '<center/>'
+                        ),
                 };
                 const V7 = {
-                    sun: L.marker([-3.162522, 19.506401], { icon: soleil }),
-                    nuages: L.marker([-3.162522, 19.506401], { icon: nuageux }),
-                    orages: L.marker([-3.162522, 19.506401], { icon: orage }),
-                    rain: L.marker([-3.162522, 19.506401], { icon: pluie }),
+                    sun: L.marker([-3.162522, 19.506401], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Maindombe"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinMai')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxMai')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-3.162522, 19.506401], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Maindombe"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinMai')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxMai')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-3.162522, 19.506401], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Maindombe"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinMai')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxMai')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-3.162522, 19.506401], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Maindombe"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinMai')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxMai')+
+                        '<center/>'
+                        ),
                 };
                 const V8 = {
-                    sun: L.marker([-3.759058, 22.071509], { icon: soleil }),
-                    nuages: L.marker([-3.759058, 22.071509], { icon: nuageux }),
-                    orages: L.marker([-3.759058, 22.071509], { icon: orage }),
-                    rain: L.marker([-3.759058, 22.071509], { icon: pluie }),
+                    sun: L.marker([-3.759058, 22.071509], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kasai"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKas')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKas')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-3.759058, 22.071509], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kasai"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKas')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKas')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-3.759058, 22.071509], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kasai"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKas')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKas')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-3.759058, 22.071509], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kasai"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKas')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKas')+
+                        '<center/>'
+                        ),
                 };
                 const V9 = {
-                    sun: L.marker([-0.148381, 19.80852], { icon: soleil }),
-                    nuages: L.marker([-0.148381, 19.80852], { icon: nuageux }),
-                    orages: L.marker([-0.148381, 19.80852], { icon: orage }),
-                    rain: L.marker([-0.148381, 19.80852], { icon: pluie }),
+                    sun: L.marker([-0.148381, 19.80852], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Equateur"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinEqua')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxEqua')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-0.148381, 19.80852], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Equateur"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinEqua')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxEqua')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-0.148381, 19.80852], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Equateur"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinEqua')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxEqua')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-0.148381, 19.80852], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Equateur"+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinEqua')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxEqua')+
+                        '<center/>'
+                        ),
                 };
                 const V10 = {
-                    sun: L.marker([-7.323279, 23.082251], { icon: soleil }),
-                    nuages: L.marker([-7.323279, 23.082251], { icon: nuageux }),
-                    orages: L.marker([-7.323279, 23.082251], { icon: orage }),
-                    rain: L.marker([-7.323279, 23.082251], { icon: pluie }),
+                    sun: L.marker([-7.323279, 23.082251], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-7.323279, 23.082251], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-7.323279, 23.082251], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-7.323279, 23.082251], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V11 = {
-                    sun: L.marker([-6.308785, 23.939185], { icon: soleil }),
-                    nuages: L.marker([-6.308785, 23.939185], { icon: nuageux }),
-                    orages: L.marker([-6.308785, 23.939185], { icon: orage }),
-                    rain: L.marker([-6.308785, 23.939185], { icon: pluie }),
+                    sun: L.marker([-6.308785, 23.939185], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-6.308785, 23.939185], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-6.308785, 23.939185], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-6.308785, 23.939185], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V12 = {
-                    sun: L.marker([-2.936497, 24.521460], { icon: soleil }),
-                    nuages: L.marker([-2.936497, 24.521460], { icon: nuageux }),
-                    orages: L.marker([-2.936497, 24.521460], { icon: orage }),
-                    rain: L.marker([-2.936497, 24.521460], { icon: pluie }),
+                    sun: L.marker([-2.936497, 24.521460], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-2.936497, 24.521460], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-2.936497, 24.521460], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-2.936497, 24.521460], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V13 = {
-                    sun: L.marker([-1.296342, 22.362846], { icon: soleil }),
-                    nuages: L.marker([-1.296342, 22.362846], { icon: nuageux }),
-                    orages: L.marker([-1.296342, 22.362846], { icon: orage }),
-                    rain: L.marker([-1.296342, 22.362846], { icon: pluie }),
+                    sun: L.marker([-1.296342, 22.362846], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-1.296342, 22.362846], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-1.296342, 22.362846], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-1.296342, 22.362846], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V14 = {
-                    sun: L.marker([1.500522, 21.796851], { icon: soleil }),
-                    nuages: L.marker([1.500522, 21.796851], { icon: nuageux }),
-                    orages: L.marker([1.500522, 21.796851], { icon: orage }),
-                    rain: L.marker([1.500522, 21.796851], { icon: pluie }),
+                    sun: L.marker([1.500522, 21.796851], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([1.500522, 21.796851], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([1.500522, 21.796851], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([1.500522, 21.796851], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V15 = {
-                    sun: L.marker([2.477704, 20.148901], { icon: soleil }),
-                    nuages: L.marker([2.477704, 20.148901], { icon: nuageux }),
-                    orages: L.marker([2.477704, 20.148901], { icon: orage }),
-                    rain: L.marker([2.477704, 20.148901], { icon: pluie }),
+                    sun: L.marker([2.477704, 20.148901], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([2.477704, 20.148901], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([2.477704, 20.148901], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([2.477704, 20.148901], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V16 = {
-                    sun: L.marker([3.201907, 22.225317], { icon: soleil }),
-                    nuages: L.marker([3.201907, 22.225317], { icon: nuageux }),
-                    orages: L.marker([3.201907, 22.225317], { icon: orage }),
-                    rain: L.marker([3.201907, 22.225317], { icon: pluie }),
+                    sun: L.marker([3.201907, 22.225317], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([3.201907, 22.225317], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([3.201907, 22.225317], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([3.201907, 22.225317], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V17 = {
-                    sun: L.marker([3.223845, 26.158423], { icon: soleil }),
-                    nuages: L.marker([3.223845, 26.158423], { icon: nuageux }),
-                    orages: L.marker([3.223845, 26.158423], { icon: orage }),
-                    rain: L.marker([3.223845, 26.158423], { icon: pluie }),
+                    sun: L.marker([3.223845, 26.158423], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([3.223845, 26.158423], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([3.223845, 26.158423], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([3.223845, 26.158423], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V18 = {
-                    sun: L.marker([-0.029880, 25.984536], { icon: soleil }),
-                    nuages: L.marker([-0.029880, 25.984536], { icon: nuageux }),
-                    orages: L.marker([-0.029880, 25.984536], { icon: orage }),
-                    rain: L.marker([-0.029880, 25.984536], { icon: pluie }),
+                    sun: L.marker([-0.029880, 25.984536], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-0.029880, 25.984536], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-0.029880, 25.984536], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-0.029880, 25.984536], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V19 = {
-                    sun: L.marker([-4.153622, 26.938452], { icon: soleil }),
-                    nuages: L.marker([-4.153622, 26.938452], { icon: nuageux }),
-                    orages: L.marker([-4.153622, 26.938452], { icon: orage }),
-                    rain: L.marker([-4.153622, 26.938452], { icon: pluie }),
+                    sun: L.marker([-4.153622, 26.938452], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-4.153622, 26.938452], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-4.153622, 26.938452], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-4.153622, 26.938452], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V20 = {
-                    sun: L.marker([-6.155886, 25.971655], { icon: soleil }),
-                    nuages: L.marker([-6.155886, 25.971655], { icon: nuageux }),
-                    orages: L.marker([-6.155886, 25.971655], { icon: orage }),
-                    rain: L.marker([-6.155886, 25.971655], { icon: pluie }),
+                    sun: L.marker([-6.155886, 25.971655], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-6.155886, 25.971655], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-6.155886, 25.971655], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-6.155886, 25.971655], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V21 = {
-                    sun: L.marker([-8.615554, 26.396717], { icon: soleil }),
-                    nuages: L.marker([-8.615554, 26.396717], { icon: nuageux }),
-                    orages: L.marker([-8.615554, 26.396717], { icon: orage }),
-                    rain: L.marker([-8.615554, 26.396717], { icon: pluie }),
+                    sun: L.marker([-8.615554, 26.396717], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-8.615554, 26.396717], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-8.615554, 26.396717], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-8.615554, 26.396717], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V22 = {
-                    sun: L.marker([-10.610468, 24.103492], { icon: soleil }),
-                    nuages: L.marker([-10.610468, 24.103492], { icon: nuageux }),
-                    orages: L.marker([-10.610468, 24.103492], { icon: orage }),
-                    rain: L.marker([-10.610468, 24.103492], { icon: pluie }),
+                    sun: L.marker([-10.610468, 24.103492], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-10.610468, 24.103492], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-10.610468, 24.103492], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-10.610468, 24.103492], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V23 = {
-                    sun: L.marker([-11.617903, 28.307737], { icon: soleil }),
-                    nuages: L.marker([-11.617903, 28.307737], { icon: nuageux }),
-                    orages: L.marker([-11.617903, 28.307737], { icon: orage }),
-                    rain: L.marker([-11.617903, 28.307737], { icon: pluie }),
+                    sun: L.marker([-11.617903, 28.307737], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-11.617903, 28.307737], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-11.617903, 28.307737], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-11.617903, 28.307737], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V24 = {
-                    sun: L.marker([-5.774244677491197, 29.177237467736163], { icon: soleil }),
-                    nuages: L.marker([-5.774244677491197, 29.177237467736163], { icon: nuageux }),
-                    orages: L.marker([-5.774244677491197, 29.177237467736163], { icon: orage }),
-                    rain: L.marker([-5.774244677491197, 29.177237467736163], { icon: pluie }),
+                    sun: L.marker([-5.774244677491197, 29.177237467736163], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-5.774244677491197, 29.177237467736163], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-5.774244677491197, 29.177237467736163], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-5.774244677491197, 29.177237467736163], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V25 = {
-                    sun: L.marker([-3.935566, 28.877739], { icon: soleil }),
-                    nuages: L.marker([-3.935566, 28.877739], { icon: nuageux }),
-                    orages: L.marker([-3.935566, 28.877739], { icon: orage }),
-                    rain: L.marker([-3.935566, 28.877739], { icon: pluie }),
+                    sun: L.marker([-3.935566, 28.877739], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-3.935566, 28.877739], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-3.935566, 28.877739], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-3.935566, 28.877739], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V26 = {
-                    sun: L.marker([-1.573144091486702, 29.250535502258046], { icon: soleil }),
-                    nuages: L.marker([-1.573144091486702, 29.250535502258046], { icon: nuageux }),
-                    orages: L.marker([-1.573144091486702, 29.250535502258046], { icon: orage }),
-                    rain: L.marker([-1.573144091486702, 29.250535502258046], { icon: pluie }),
+                    sun: L.marker([-1.573144091486702, 29.250535502258046], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([-1.573144091486702, 29.250535502258046], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([-1.573144091486702, 29.250535502258046], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([-1.573144091486702, 29.250535502258046], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
                 const V27 = {
-                    sun: L.marker([1.071038, 30.014824], { icon: soleil }),
-                    nuages: L.marker([1.071038, 30.014824], { icon: nuageux }),
-                    orages: L.marker([1.071038, 30.014824], { icon: orage }),
-                    rain: L.marker([1.071038, 30.014824], { icon: pluie }),
+                    sun: L.marker([1.071038, 30.014824], { icon: soleil }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    nuages: L.marker([1.071038, 30.014824], { icon: nuageux }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    orages: L.marker([1.071038, 30.014824], { icon: orage }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
+                    rain: L.marker([1.071038, 30.014824], { icon: pluie }).bindPopup(
+                        '<center>'+
+                        "Kinshasa "+ '<br/>' +
+                        "Min : "+sessionStorage.getItem('tempMinKin')+"  "+
+                        "Max : "+sessionStorage.getItem('tempMaxKin')+
+                        '<center/>'
+                        ),
                 };
 
                 const ville = [
