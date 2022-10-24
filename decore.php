@@ -9,7 +9,7 @@
     <title></title>
 
     <!-- Favicon -->
-    <link rel="icon" href="IMG1.jpg">
+    <link rel="icon" href="IMG1.jpg"> 
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/style.css">
