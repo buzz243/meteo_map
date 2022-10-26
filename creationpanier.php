@@ -60,24 +60,29 @@
             <form action="enregistreuser.php" method="post" style="margin:50px;" >
             <div class="form-group has-sucess">
             <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" class="form-control"  required="required">
+            <input type="text" id="nom" name="nom" class="form-control" placeholder="votre nom"  required="required">
         </div><br><br>
 
                <div class="form-group has-sucess">
             <label for="nom">Postnom:</label>
-            <input type="text" id="nom" name="postnom" class="form-control"  required="required">
+            <input type="text" id="nom" name="postnom" placeholder="votre postnom" class="form-control"  required="required">
         </div><br><br>
 
              <form class="form-block" style="margin:50px;"  required="required">
             <div class="form-group has-sucess">
             <label for="nom">Prénom:</label>
-            <input type="text" id="nom" name="prenom" class="form-control"  required="required">
+            <input type="text" id="nom" name="prenom" placeholder="votre prenom"  class="form-control"  required="required">
         </div><br><br>
 
 
              <div class="form-group">
             <label for="Email">Mot de passe:</label>
-            <input type="password" id="Email" name="password" class="form-control"  required="required">
+            <input type="password" id="Email" name="password" placeholder="votre mot de passe" class="form-control"  required="required">
+        </div>
+        
+        <div class="form-group">
+            <label for="Emailp">Confirmez votre mot de passe:</label>
+            <input type="password" id="Email" placeholder="Confirmez votre mot de passe" name="passwordi" class="form-control"  required="required">
         </div>
 
        
@@ -91,11 +96,7 @@
         <input  name="seconnecter" type="submit" value="Créez un compte" class="btn btn-primary active">
       
      
-    
-    <form action="modifiepanier.php" method="post">
-             <input type="submit" name="btn_return" class="btn btn-danger" value="Modifiez votre compte"/>
-           </form>
-
+   
 </form>
 
 
