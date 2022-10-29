@@ -104,8 +104,8 @@
 
             <tr>
                 <td>
-                    <label name="bandundu" id="kinshasa">
-                        2. Matadi
+                    <label name="kinshasa" id="kinshasa">
+                        2. Bandundu
                     </label>
                 </td>
                 <td>
@@ -1138,11 +1138,10 @@
             /*Sauvergarder les données dans une sessionStorage*/
 
             $('#Envoyer').click(function (e) {
-                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() || $('#dirKin').val() !== '') {
+                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('phenoKin', $('#phenoKin').val());
                     sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
                     sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
-                    sessionStorage.setItem('dirkin', $('#dirkin').val());
                 }
                 if ($('#phenoBan').val() || $('#tempMinBan').val() || $('#tempMaxBan').val() !== '') {
                     sessionStorage.setItem('phenoBan', $('#phenoBan').val());
@@ -1344,44 +1343,6 @@
                     sessionStorage.getItem('pheno27')
 
                 ];
-
-
-                $('#actualiser').on('click', function (e) {
-                e.preventDefault();
-                var dir = [
-                    sessionStorage.getItem('dirKin'),
-                    /*sessionStorage.getItem('phenoBan'),
-                    sessionStorage.getItem('phenoHUel'),
-                    sessionStorage.getItem('phenoKCent'),
-                    sessionStorage.getItem('phenoKwa'),
-                    sessionStorage.getItem('pheno6'),
-                    sessionStorage.getItem('pheno7'),
-                    sessionStorage.getItem('pheno8'),
-                    sessionStorage.getItem('pheno9'),
-                    sessionStorage.getItem('pheno10'),
-                    sessionStorage.getItem('pheno11'),
-                    sessionStorage.getItem('pheno12'),
-                    sessionStorage.getItem('pheno13'),
-                    sessionStorage.getItem('pheno14'),
-                    sessionStorage.getItem('pheno15'),
-                    sessionStorage.getItem('pheno16'),
-                    sessionStorage.getItem('pheno17'),
-                    sessionStorage.getItem('pheno18'),
-                    sessionStorage.getItem('pheno19'),
-                    sessionStorage.getItem('pheno20'),
-                    sessionStorage.getItem('pheno21'),
-                    sessionStorage.getItem('pheno22'),
-                    sessionStorage.getItem('pheno23'),
-                    sessionStorage.getItem('pheno24'),
-                    sessionStorage.getItem('pheno25'),
-                    sessionStorage.getItem('pheno26'),
-                    sessionStorage.getItem('pheno27')*/
-
-                ];
-
-
-
-
                 
                 const V1 = {
                     sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup(
