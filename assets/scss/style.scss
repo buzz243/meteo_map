@@ -1,0 +1,75 @@
+/* ------------------------------------------
+[Master Stylesheet]
+
+Template Name: Alime - Photography HTML Template
+Template Author: Colorlib
+Template Author URL: http://colorlib.com
+Version: 1.0.0
+Last Update: Feb 22, 2019
+
+
+[Tables of CSS Content]
+
++ body
+
+    - 01.0 Reboot CSS
+    - 02.0 Spacing CSS
+    - 03.0 Preloader CSS
+    - 04.0 Heading CSS
+    - 05.0 Backtotop CSS
+    - 06.0 Buttons CSS
+    - 07.0 Header CSS
+    - 08.0 Hero CSS
+    - 09.0 Footer CSS
+    - 10.0 Follow CSS
+    - 11.0 About CSS
+    - 12.0 Breadcrumb CSS
+    - 13.0 Blog CSS
+    - 14.0 Team CSS
+    - 15.0 Gallery CSS
+    - 16.0 Contact CSS
+
+--------------------------------------------- */
+
+/* Import Fonts & All CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700');
+@import 'assets/css/bootstrap.min.css';
+@import 'assets/css/animate.css';
+@import 'assets/css/default-assets/classy-nav.css';
+@import 'assets/css/owl.carousel.min.css';
+@import 'assets/css/magnific-popup.css';
+@import 'assets/css/font-awesome.min.css';
+@import 'assets/css/default-assets/themify-icons.css';
+@import 'assets/css/style.css';
+
+// Utilities
+
+@import "assets/scss/utilities/fonts";
+@import "assets/scss/utilities/variables";
+@import "assets/scss/utilities/responsive";
+@import "assets/scss/utilities/color";
+
+// Mixins
+
+@import "assets/scss/mixins/flex";
+@import "assets/scss/mixins/miscellaneous";
+
+// Stylesheet
+
+@import "assets/scss/reboot";
+@import "assets/scss/spacing";
+@import "assets/scss/preloader";
+@import "assets/scss/heading";
+@import "assets/scss/backtotop";
+@import "assets/scss/buttons";
+@import "assets/scss/header";
+@import "assets/scss/hero";
+@import "assets/scss/footer";
+@import "assets/scss/follow";
+@import "assets/scss/about";
+@import "assets/scss/breadcrumb";
+@import "assets/scss/blog";
+@import "assets/scss/team";
+@import "assets/scss/gallery";
+@import "assets/scss/contact";
