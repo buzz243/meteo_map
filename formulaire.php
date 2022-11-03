@@ -15,7 +15,46 @@
         crossorigin=""></script>
     <title>bulletin de temperature</title>
 </head>
+<?php
+       session_start(); 
+       function  MoiGodbless_crypt($mot,$clef){
+
+        $Lclef=strlen($clef);//
+        $Lmot = strlen($mot); //
+    
+        if($Lclef < $Lmot){
+           
+            
+            $clef = str_pad($clef, $Lmot,$Lclef,STR_PAD_RIGHT); 
+    
+    
+        }
+    
+           elseif($Lclef > $Lmot){
+    
+            
+    
+              $jh = $Lclef - $Lmot ;
+              $_clefs = substr($clef,0,$jh); 
+    
+           }
+           
+            return $mot ^ $clef ; 
+    
+    } 
  
+      
+      $cleactiver= "1v@@@@@_§!ui@@#{[]}"; 
+      $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
+      $cleh = MoiGodbless_crypt($cleactiver, $Clef);
+  if( $_SESSION["clefjk"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
+ { header("location:index.php"); 
+ }
+ /* if( $_SESSION["clefj"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
+ { header("location:index.php"); 
+ } */
+ ?>
+
 <body>
     <div id="map"></div>
     <form>
