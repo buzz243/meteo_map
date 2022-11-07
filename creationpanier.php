@@ -68,10 +68,19 @@
   <div id="formulaireconnexion">
      <div class="row">
             <form action="enregistreuser.php" method="post" style="margin:50px;" >
+            <?php if(isset($_GET['erreura'])){?>
+              <p class="error" style="background:#F2DEDE;color:#A94442;padding:10px;">
+              <?php echo $_GET['erreura'];
+            }?> </p>
             <div class="form-group has-sucess">
             <label for="nom"></label>
             <input type="email" id="nom" name="nom" class="form-control" placeholder="Votre email"  required="required">
         </div><br><br>
+
+        <?php if(isset($_GET['erreurajk'])){?>
+              <p class="error" style="background:#F2DEDE;color:#A94442;padding:10px;">
+              <?php echo $_GET['erreurajk'];
+            }?> 
         
              <div class="form-group">
             <label for="Email"></label>
@@ -83,7 +92,10 @@
             <input type="password" id="Emailp" placeholder="Confirmez-le" name="passwordi" class="form-control"  required="required">
         </div>
 
-       
+        <?php if(isset($_GET['erreuraj'])){?>
+              <p class="error" style="background:#F2DEDE;color:#A94442;padding:10px;">
+              <?php echo $_GET['erreuraj'];
+            }?> </p>
 
 
 

@@ -16,7 +16,11 @@
     <title>bulletin de temperature</title>
 </head>
 <?php
+<<<<<<< HEAD
        
+=======
+       session_start(); 
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
        function  MoiGodbless_crypt($mot,$clef){
 
         $Lclef=strlen($clef);//
@@ -43,6 +47,7 @@
     
     } 
  
+<<<<<<< HEAD
       session_start(); 
       $cleactiver= "1v@@@@@_§!ui@@#{[]}"; 
       $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
@@ -50,6 +55,19 @@
   if( $_SESSION["clefj"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
  { header("location:index.php"); 
  }?>
+=======
+      
+      $cleactiver= "1v@@@@@_§!ui@@#{[]}"; 
+      $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
+      $cleh = MoiGodbless_crypt($cleactiver, $Clef);
+  if( $_SESSION["clefjk"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
+ { header("location:index.php"); 
+ }
+ /* if( $_SESSION["clefj"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
+ { header("location:index.php"); 
+ } */
+ ?>
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 
 <body>
     <div id="map"></div>

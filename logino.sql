@@ -4,10 +4,14 @@
 --
 -- Host: localhost:3306
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- Generation Time: Oct 24, 2022 at 02:01 PM
 =======
 -- Generation Time: Nov 02, 2022 at 04:50 PM
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+-- Generation Time: Nov 02, 2022 at 04:50 PM
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -35,6 +39,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `utilisateur` (
   `id` int(8) NOT NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
   `nom` varchar(100) DEFAULT NULL,
   `postnom` varchar(100) DEFAULT NULL,
   `prenom` varchar(100) DEFAULT NULL,
@@ -44,6 +49,11 @@ CREATE TABLE `utilisateur` (
   `motpass` varchar(140) DEFAULT NULL,
   `cleactive` varchar(255) DEFAULT NULL
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+  `email` varchar(120) DEFAULT NULL,
+  `motpass` varchar(140) DEFAULT NULL,
+  `cleactive` varchar(255) DEFAULT NULL
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -51,10 +61,13 @@ CREATE TABLE `utilisateur` (
 --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 INSERT INTO `utilisateur` (`id`, `nom`, `postnom`, `prenom`, `motpass`) VALUES
 (1, 'marco', 'ben', 'franko', '123889+9+'),
 (2, 'araba', 'menioni', 'franiala', '12238889+');
 =======
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 INSERT INTO `utilisateur` (`id`, `email`, `motpass`, `cleactive`) VALUES
 (13781459, 'LvP]\0_\nLV\n[', 'LvP]\0_\nLV\n[', 'Ryvwp!i¤Å_ppBMl?L'),
 (48590991, ']WEQY&X_\\S[', ']WEQY&X_\\S[', 'Ryvwp!i¤Å_ppBMl?L'),
@@ -70,7 +83,10 @@ INSERT INTO `utilisateur` (`id`, `email`, `motpass`, `cleactive`) VALUES
 (973388290, '	y^ZQZHZ', 'RVP', 'Ryvwp!i¤Å_ppBMl?L'),
 (976102190, '\r\nWXY^X[XpX	Z[', '\r\nWXY^X[X^', 'Ryvwp!i¤Å_ppBMl?L'),
 (985365380, 'KWUQ!Q\\	S_', 'KWUQ!Q\\	S_', 'Ryvwp!i¤Å_ppBMl?L');
+<<<<<<< HEAD
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 
 --
 -- Indexes for dumped tables
@@ -91,10 +107,14 @@ ALTER TABLE `utilisateur`
 --
 ALTER TABLE `utilisateur`
 <<<<<<< HEAD
+<<<<<<< HEAD
   MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 =======
   MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=985365381;
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=985365381;
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

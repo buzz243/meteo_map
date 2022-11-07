@@ -5,26 +5,37 @@
     //include "enregistreuser.php";
     $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     $cleactiver= "1v@@@@@_§!ui@@#{[]}";  
     $cryptcle =  MoiGodbless_crypt($cleactiver,$Clef);
     $clep=  MoiGodbless_crypt($cryptcle,$Clef);
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+    $cleactiver= "1v@@@@@_§!ui@@#{[]}";  
+    $cryptcle =  MoiGodbless_crypt($cleactiver,$Clef);
+    $clep=  MoiGodbless_crypt($cryptcle,$Clef);
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 
     $dbs= mysqli_connect("localhost","root","","logino"); 
     if(isset($_POST["seconnecter"])){
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    $nom=strtolower($_POST["nom"]);
 =======
    $nom = MoiGodbless_crypt(strtolower(htmlspecialchars(trim(strip_tags(addslashes($_POST["nom"]))))),$Clef);
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+   $nom = MoiGodbless_crypt(strtolower(htmlspecialchars(trim(strip_tags(addslashes($_POST["nom"]))))),$Clef);
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
   
    $password=strtolower($_POST["password"]);
    //$Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
    $cleinmot=MoiGodbless_crypt($password,$Clef);
  // $rolap=$_POST["rola"];
   
+<<<<<<< HEAD
 <<<<<<< HEAD
     $sql= "SELECT * from utilisateur WHERE nom=? 
     and motpass=?";
@@ -45,6 +56,8 @@
     session_write_close();
     */
 =======
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
     $sql= "SELECT * from utilisateur WHERE email=? 
     and motpass=? and cleactive=?";
 
@@ -65,7 +78,10 @@
     $_SESSION["clefj"] = $row["cleactive"];//  $_SESSION pour la cle unique pour chaque user
     session_write_close();
     //*/
+<<<<<<< HEAD
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 
     if($requete->num_rows==1)
     {
@@ -75,6 +91,7 @@
             // session_start();
       
 <<<<<<< HEAD
+<<<<<<< HEAD
              if(session_destroy()){
                 
                // header("location:index.php?jemesuisdeconnecté(e)");
@@ -82,6 +99,8 @@
        
              }
 =======
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
             // if(session_destroy()){
                 
                // header("location:index.php?jemesuisdeconnecté(e)");
@@ -89,7 +108,10 @@
               header("location:formulaire.php");
        
             // }
+<<<<<<< HEAD
 >>>>>>> 9df02ee28b0c7adce82f92390e3e780dd9ddf33b
+=======
+>>>>>>> c35e2df88a36f5f0a188ccd5fcfae09a203ff608
 
               //header("location:formulaire.html");
 
