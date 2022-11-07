@@ -2,9 +2,49 @@
 <html>
 <head>
   <title></title>
+  <style>
+     *{box-sizing: border-box;}
+  html,body{height:100%;}
+  .login-card{
+    width:100%;
+    padding:70px 30px 44px;
+    text-align: center;
+
+  }
+  .login-card >h2{
+    margin:0 0 12px ;
+    font-size:36px;
+    font-weight: 600;
+
+  }
+  .login-form{
+    width:100%;
+    margin:0;
+    display:grid;
+    gap: 16px;
+
+  }
+  @keyframes pan{
+     100%{background-position: 15% 50%;}
+  }
+ 
+  .avatar{
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    padding-bottom:auto;
+  }
+  body{
+    display:grid;
+    place-items: center;
+    margin: 0;
+    background-size:cover;
+    animation:pan 6s infinite alternate linear;
+  }
+  </style>
 </head>
 
-<body  class="bg-dark" >
+<body  class="bg-white" >
 
 <?php 
       
@@ -16,9 +56,10 @@
       //$connec = new mysqli("localhost","root","","gestion_supermarcher");
      // include 'styleadmin.php';?>
 
- <?php //afficher_menu_accueil();?>
+ <?php //afficher_menu_accueil();btn-success?>
 
-
+<?php
+/*echo '
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,39 +77,42 @@
      
     </ul>
   </div>
-</nav>
+</nav> ';*/
 
-
- 
+?>
+ <br><br><br>
   <script type="text/javascript" href="lib/js/bootstrap.js">
 </script>
  
 
-<div class="container" id="blocarticle" class="row" align="center" class="col-md-4">
+<div class="container" 
+   id="blocarticle" class="row" align="center" class="col-md-4">
 
    <div class="row justify-content-center" >
 
-      <div class="col-lg-45 bg-light mt-45 px-0" >
-   
-      <h3 class="text-center text-light btn-success p-3"> Se connecter </h3>
+      <div class="col-lg-45 bg-white mt-35 px-0 " >
+        
+      <img src="Logo METTELSAT.jpg"  class="avatar"/>
+     
   
 
 
-
-  <div id="formulaireconnexion">
+<div >
+  <div id="formulaireconnexion" class="login-card ">
+  
      <div class="row">
-            <form action="logina.php" method="post" style="margin:50px;" >
+            <form action="logina.php" method="post" class="login-form" style="margin:50px;" >
             <div class="form-group has-sucess">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom"  placeholder="votre nom"  class="form-control"  required="required">
-        </div><br><br>
+            <label for="nom" style="color:white;font-size: 22px;">Votre email</label>
+            <input type="email"  id="nom" name="nom"  placeholder="Votre email : marc@gmail.com"  class="form-control"  required="required">
+        </div><br>
 
              
 
 
              <div class="form-group">
-            <label for="Email">Mot de passe:</label>
-            <input type="password" id="Email" name="password"  placeholder="votre mot de passe" class="form-control"  required="required">
+            <label for="Email" style="color:white;font-size: 22px;">Votre mot de passe</label>
+            <input type="password"  style="width:300px;" id="Email" name="password"  placeholder="Votre mot de passe" class="form-control"  required="required">
         </div>
 
        
@@ -76,15 +120,16 @@
            
 
 
-      <br>
+    
 
 
          
 
 
       <br>
-        <input  name="seconnecter" type="submit" value="Se connecter" class="btn btn-primary active">
-      
+        <input  name="seconnecter"  style="border-radius: 20px;" type="submit" value="Se connecter" class="btn btn-primary active">
+        <a  href="creationpanier.php"  style="border-radius: 20px;" class="btn btn-primary active"> Créer un compte
+        </a>
      
     
     
@@ -95,6 +140,6 @@
 
 </div>
 
-
+</div>
 </body>
 </html>

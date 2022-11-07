@@ -1,33 +1,52 @@
 <?php
    session_start();
    require('database.php');
+  require('decore.php');
    $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
 
+   $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
 
+   $dbs= mysqli_connect("localhost","root","","logino"); 
     if (isset($_POST['seconnecter'])){
         
-          $nom = strtolower(trim($_POST['nom'])); 
-           $nomp = strtolower(trim($_POST['postnom']));
-            $nompr = strtolower(trim($_POST['prenom'])); 
-             $nompt = strtolower(trim($_POST['password']));  
+          $nom = Godbless_crypt(strtolower(htmlspecialchars(trim(strip_tags(addslashes($_POST['nom']))))),$Clef); 
+          // $nomp = strtolower(trim($_POST['postnom']));
+            //$nompr = strtolower(trim($_POST['prenom'])); 
+             $nompt = strtolower(trim($_POST['password']));
+              $cleactiver= "1v@@@@@_§!ui@@#{[]}";  
               $nompti = strtolower(trim($_POST['passwordi'])); 
-             $cryptmot = Godbless_crypt($nompt,$Clef);
+              $cryptmot = Godbless_crypt($nompt,$Clef);
+              $cryptcle = Godbless_crypt($cleactiver,$Clef);
            
               
               $numpm = "DEFAULT()"; 
 
-           // $ft =$nom.$nomp.$nompr.$nompt.$jetonn; 
+              
+       $sql= "SELECT * from utilisateur WHERE email=?";
+
+   //  $entree=$connec->prepare($sql);
+       $entree=$dbs->prepare($sql);
+       $entree->bind_param("s",$nom);
+       $entree->execute();          
+       $requete= $entree->get_result(); 
+       $row=$requete->fetch_assoc();
+
+           
 
          
          
         // if($ft!=identiterverif()){
+
+         if(!($requete->num_rows==1))
+    { //quand il n'existe , c'est alors il peut être inséré
    
           session_regenerate_id();
           $_SESSION["nom"] =strtolower($_POST['nom']);
-          $_SESSION["postnom"] = strtolower($_POST['postnom']);
-          $_SESSION["prenom"] = strtolower($_POST['prenom']);
-          $_SESSION["sexe"] =$_POST['password'];
+         // $_SESSION["postnom"] = strtolower($_POST['postnom']);
+          //$_SESSION["prenom"] = strtolower($_POST['prenom']);
+          $_SESSION["cls"] =$_POST['password'];
           $_SESSION["numcandj"] = $numpm;
+          $_SESSION["clefj"] = Godbless_crypt($cryptcle,$Clef);//  $_SESSION pour la cle
 
           session_write_close();
          //echo   id_random();
@@ -44,30 +63,62 @@
         //   $q= $db->prepare('INSERT INTO utilisateur VALUES(:df,:a,:b,:c,:d)');
         if($nompt==$nompti)
         {
-        $q= $db->prepare("INSERT INTO utilisateur VALUES(:df,:a,:b,:c,:dk)");
+         $Lmotp = strlen($nompt); 
+         //LA LONGUEUR DU MOT DE PASSE SOIT SUPERIEUR OU EGALE A 8
+         if($Lmotp>=8){
+
+
+        
+
+        $q= $db->prepare("INSERT INTO utilisateur VALUES(:df,:a,:dk,:dfj)");
 
                     $q->execute(array(
                         'df'=> id_random() ,
-                        'a'=>$nom ,
-                        'b'=>$nomp ,
-                        'c'=>$nompr ,
-                        'dk'=>$cryptmot 
+                        'a'=>$nom,
+                        'dk'=>$cryptmot,
+                        'dfj'=>$cryptcle
                      
                   ));
              
-                 header("location:index.php");
+                 header("location:index.php?connectez-vous!");
                 //echo Godbless_crypt(Godbless_crypt($nompt,$Clef),$Clef);
 
                 }
-
-
+               // echo '<script src="sweetalert.min.js"></script>
+                 //      <script type="text/javascript">';
+                if($Lmotp<8){
+                       
+                   header("location:creationpanier.php?erreura=mot de passe faible longueur < 8");
+            
+                 // header("location:creationpanier.php");
+               }
+                     //sweetalert("OOps","les deux mots de passe doivent être identique","error");
+               }
                 if(!($nompt==$nompti)){
-                   echo "<script type='javascript/text'> alert('les deux mots de passe doivent être identique');</script>";
-                  header("location:creationpanier.php");
+                   //sweetAlert("OOps","les deux mots incorrects","error");
+                  // echo "<script> alert('les deux mots de passe doivent être identique');</script>";
+                 /*  echo '
+                  
+                   <script type="text/javascript">
+                   sweetAlert("OOps","les deux mots incorrects","error");
+                   </script>
+               
+                  
+                   ';*/
+                   header("location:creationpanier.php?erreuraj=deux mots de passe non identiques");
+                  ///header("location:creationpanier.php");
                        
                  }
         }
-       
+
+      }
+      if($requete->num_rows==1)
+      {  
+        
+          //header("location:creationpanier.php");
+          //echo '<script type="text/javascript"> alert("Cet email existe ");</script>';
+          header("location:creationpanier.php?erreurajk=Cet email existe déjà !");
+         }
 
 //    	 }
               function id_random(){
@@ -114,6 +165,6 @@ function  Godbless_crypt($mot,$clef){
  
 
               
-
+  // echo "</script>";
 
 ?>

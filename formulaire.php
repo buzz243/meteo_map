@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +15,41 @@
         crossorigin=""></script>
     <title>bulletin de temperature</title>
 </head>
+<?php
+       
+       function  MoiGodbless_crypt($mot,$clef){
+
+        $Lclef=strlen($clef);//
+        $Lmot = strlen($mot); //
+    
+        if($Lclef < $Lmot){
+           
+            
+            $clef = str_pad($clef, $Lmot,$Lclef,STR_PAD_RIGHT); 
+    
+    
+        }
+    
+           elseif($Lclef > $Lmot){
+    
+            
+    
+              $jh = $Lclef - $Lmot ;
+              $_clefs = substr($clef,0,$jh); 
+    
+           }
+           
+            return $mot ^ $clef ; 
+    
+    } 
+ 
+      session_start(); 
+      $cleactiver= "1v@@@@@_§!ui@@#{[]}"; 
+      $Clef  = md5(md5("$*METEO__APPINGENIEURJOELMONDO££µ%¨£/_"));
+      $cleh = MoiGodbless_crypt($cleactiver, $Clef);
+  if( $_SESSION["clefj"]!=$cleh)//c'est la clé qui autorise l'accès au formulaire
+ { header("location:index.php"); 
+ }?>
 
 <body>
     <div id="map"></div>
@@ -1138,11 +1173,10 @@
             /*Sauvergarder les données dans une sessionStorage*/
 
             $('#Envoyer').click(function (e) {
-                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() || $('#dirKin').val() !== '') {
+                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
                     sessionStorage.setItem('phenoKin', $('#phenoKin').val());
                     sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
                     sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
-                    sessionStorage.setItem('dirKin', $('#dirKin').val());
                 }
                 if ($('#phenoBan').val() || $('#tempMinBan').val() || $('#tempMaxBan').val() !== '') {
                     sessionStorage.setItem('phenoBan', $('#phenoBan').val());
@@ -1312,8 +1346,6 @@
 
             });
 
-
-            /*Sauvegarde de phenomene dans la session*/
             $('#actualiser').on('click', function (e) {
                 e.preventDefault();
                 var pheno = [
@@ -1346,16 +1378,6 @@
                     sessionStorage.getItem('pheno27')
 
                 ];
-
-
-                /*Sauvegarde la directioin du vent dans la session
-                $('#actualiser').on('click', function (e) {
-                e.preventDefault();
-                var dir = [
-                    sessionStorage.getItem('dirKin')
-                ];
-                */
-
                 
                 const V1 = {
                     sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup(

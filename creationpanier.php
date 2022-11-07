@@ -2,14 +2,23 @@
 <html>
 <head>
   <title></title>
+  <link rel="stylesheet" href="lib/sweetalert/sweetalert.css" />
+  <style>
+  .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  </style>
 </head>
 
-<body  class="bg-dark" >
+<body  class="" >
 
 <?php 
       
       session_start();
       require('decore.php');
+      //Enregistrez-vous
      
    
       //include "configue.inc.php";
@@ -43,14 +52,15 @@
   <script type="text/javascript" href="lib/js/bootstrap.js">
 </script>
  
-
+<br><br><br>
 <div class="container" id="blocarticle" class="row" align="center" class="col-md-4">
 
    <div class="row justify-content-center" >
 
-      <div class="col-lg-45 bg-light mt-45 px-0" >
+      <div class="col-lg-148 bg-light mt-148 px-10" >
+      <img src="Logo METTELSAT.jpg"  class="avatar"/>
    
-      <h3 class="text-center text-light   btn-primary active  p-3"> Enregistrez-vous  </h3>
+      <h3 class="text-center text-light   btn-primary active  p-13">   </h3>
   
 
 
@@ -59,30 +69,18 @@
      <div class="row">
             <form action="enregistreuser.php" method="post" style="margin:50px;" >
             <div class="form-group has-sucess">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" class="form-control" placeholder="votre nom"  required="required">
+            <label for="nom"></label>
+            <input type="email" id="nom" name="nom" class="form-control" placeholder="Votre email"  required="required">
         </div><br><br>
-
-               <div class="form-group has-sucess">
-            <label for="nom">Postnom:</label>
-            <input type="text" id="nom" name="postnom" placeholder="votre postnom" class="form-control"  required="required">
-        </div><br><br>
-
-             <form class="form-block" style="margin:50px;"  required="required">
-            <div class="form-group has-sucess">
-            <label for="nom">Prénom:</label>
-            <input type="text" id="nom" name="prenom" placeholder="votre prenom"  class="form-control"  required="required">
-        </div><br><br>
-
-
+        
              <div class="form-group">
-            <label for="Email">Mot de passe:</label>
-            <input type="password" id="Email" name="password" placeholder="votre mot de passe" class="form-control"  required="required">
+            <label for="Email"></label>
+            <input type="password" id="Email" name="password" placeholder="Votre mot de passe" class="form-control"  required="required">
         </div>
         
         <div class="form-group">
-            <label for="Emailp">Confirmez votre mot de passe:</label>
-            <input type="password" id="Email" placeholder="Confirmez votre mot de passe" name="passwordi" class="form-control"  required="required">
+            <label for="Emailp"></label>
+            <input type="password" id="Emailp" placeholder="Confirmez-le" name="passwordi" class="form-control"  required="required">
         </div>
 
        
@@ -93,12 +91,44 @@
 
 
       <br>
-        <input  name="seconnecter" type="submit" value="Créez un compte" class="btn btn-primary active">
+      
+        <input  name="seconnecter" style="margin: 20px;border-radius: 20px;" onclick=" lire();" type="submit" value="Créez un compte" class="btn btn-primary active">
       
      
    
 </form>
+<script src="sweetalert.min.js"></script>
 
+<script type="text/javascript">
+    function lire(){
+    ///swal("OOps","les deux mots correct","success");
+    var a = document.getElementById('Email').value;
+    var b = document.getElementById('Emailp').value;
+    var chin=a.length; //tail de mot de  de passe
+    //alert(chin.length);
+    if(a!=b){
+             
+        sweetAlert("Regret","les deux mots de passe non conformes ","error");
+
+    }
+    if(a==b){
+          
+       if(chin>=8){
+    //  swal("Satisfaction","les deux mots de passe correct","success");
+    } 
+    if(chin<8){
+             
+             sweetAlert("Regret ","le passe doit avoir une longueur supérieure à ou égale à 8","error");
+     
+         }   
+      //sweetAlert("OOps","les deux mots de passe non conformes ","error");
+     
+         }
+   
+    
+   }
+    //alert("bien");
+    </script>
 
 </div>
 
