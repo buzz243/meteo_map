@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
         crossorigin=""></script>
     <title>bulletin de temperature</title>
 </head>
-
+ 
 <body>
     <div id="map"></div>
     <form>
@@ -81,7 +81,7 @@
                     <input type="number" name="tempMinKin" id="tempMinKin" />
                 </td>
                 <td>
-                    <input type="number" name="tempMaxKin" id="tempMaxKin" />
+                    <input type="number" name="tempMaxIn" id="tempMaxIn" />
                 </td>
                 <td>
                     <select name="dirKin" id="dirKin">
@@ -159,7 +159,7 @@
                     <input type="number" id="tempMinHUel" />
                 </td>
                 <td>
-                    <input type="number" id="tempMaxHUel" />
+                    <input type="number" id="tempMaxHUele" />
                 </td>
                 <td>
                     <select name="dirHUel" id="dirHUel">
@@ -942,6 +942,7 @@
                 <td>
                     <label name="sudKivu" id="sudKivu">
                         24. Sud-Kivu
+
                     </label>
                 </td>
                 <td>
@@ -1138,10 +1139,11 @@
             /*Sauvergarder les données dans une sessionStorage*/
 
             $('#Envoyer').click(function (e) {
-                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() !== '') {
+                if ($('#phenoKin').val() || $('#tempMinKin').val() || $('#tempMaxKin').val() || $('#dirKin').val() !== '') {
                     sessionStorage.setItem('phenoKin', $('#phenoKin').val());
                     sessionStorage.setItem('tempMinKin', $('#tempMinKin').val());
                     sessionStorage.setItem('tempMaxKin', $('#tempMaxKin').val());
+                    sessionStorage.setItem('dirKin', $('#dirKin').val());
                 }
                 if ($('#phenoBan').val() || $('#tempMinBan').val() || $('#tempMaxBan').val() !== '') {
                     sessionStorage.setItem('phenoBan', $('#phenoBan').val());
@@ -1193,8 +1195,6 @@
                 }
                 if ($('#pheno10').val() || $('#tempMinKasC').val() || $('#tempMaxKasC').val() !== '') {
                     sessionStorage.setItem('pheno10', $('#pheno10').val());
-                    sessionStorage.setItem('tempMinKasC', $('#tempMinKasC').val());
-                    sessionStorage.setItem('tempMaxKasC', $('#tempMaxKasC').val());
                     
                 }
                 if ($('#pheno11').val() || $('#tempMinSank').val() || $('#tempMaxSank').val() !== '') {
@@ -1241,8 +1241,6 @@
                 }
                 if ($('#pheno18').val() || $('#tempMinMan').val() || $('#tempMaxMan').val() !== '') {
                     sessionStorage.setItem('pheno18', $('#pheno18').val());
-                    sessionStorage.setItem('tempMinMan', $('#tempMinMan').val());
-                    sessionStorage.setItem('tempMaxMan', $('#tempMaxMan').val());
                     
                 }
                 if ($('#pheno19').val() || $('#tempMinLom').val() || $('#tempMaxLom').val() !== '') {
@@ -1311,6 +1309,8 @@
 
             });
 
+
+            /*Sauvegarde de phenomene dans la session*/
             $('#actualiser').on('click', function (e) {
                 e.preventDefault();
                 var pheno = [
@@ -1343,6 +1343,16 @@
                     sessionStorage.getItem('pheno27')
 
                 ];
+
+
+                /*Sauvegarde la directioin du vent dans la session
+                $('#actualiser').on('click', function (e) {
+                e.preventDefault();
+                var dir = [
+                    sessionStorage.getItem('dirKin')
+                ];
+                */
+
                 
                 const V1 = {
                     sun: L.marker([-4.601182592343627, 16.28230698852354], { icon: soleil }).bindPopup(
