@@ -101,7 +101,7 @@
   <div id="formulaireconnexion" class="login-card ">
   
      <div class="row">
-            <form action="logini.php" method="post" class="login-form" style="margin:50px;" >
+            <form action="logina.php" method="post" class="login-form" style="margin:50px;" >
            
             <div class="form-group has-sucess">
             <label for="nom" style="color:white;font-size: 22px;">Votre email</label>

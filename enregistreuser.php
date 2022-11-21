@@ -80,7 +80,7 @@
                      
                   ));
              
-                 header("location:index.php?connectez-vous!");
+                 header("location:index.php");
                 //echo Godbless_crypt(Godbless_crypt($nompt,$Clef),$Clef);
 
                 }

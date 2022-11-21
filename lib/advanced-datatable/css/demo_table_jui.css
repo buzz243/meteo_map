@@ -34,14 +34,14 @@
 .paging_two_button .ui-button {
 	float: left;
 	cursor: pointer;
-	*cursor: hand;
+	* cursor: hand;
 }
 
 .paging_full_numbers .ui-button {
 	padding: 2px 6px;
 	margin: 0;
 	cursor: pointer;
-	*cursor: hand;
+	* cursor: hand;
 	color: #333 !important;
 }
 
@@ -68,7 +68,7 @@
 table.display thead th {
 	padding: 3px 0px 3px 10px;
 	cursor: pointer;
-	/*cursor: hand;*/
+	* cursor: hand;
 }
 
 div.dataTables_wrapper .ui-widget-header {
@@ -322,8 +322,8 @@ td.details {
 .paging_full_numbers a.paginate_button,
  	.paging_full_numbers a.paginate_active {
 	border: 1px solid #aaa;
-	/*-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	padding: 2px 5px;
 	margin: 0 3px;
 	cursor: pointer;
@@ -494,8 +494,4 @@ tr.even.gradeU td.sorting_3 {
  */
 .ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
 	background-color: #ECFFB3;
-}
-
-.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
-	background-color: #E6FF99;
 }

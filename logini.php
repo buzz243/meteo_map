@@ -80,7 +80,7 @@
 
 
     }
-    if(!($retp->rowCount() > 0))
+    if($retp->rowCount() <= 0)
     {
          
              // header("location:traitement.php");
