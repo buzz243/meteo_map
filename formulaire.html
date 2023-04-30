@@ -1093,13 +1093,26 @@
                     }).addTo(map);
             */
             //creation du calque
-            var openStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+            class myProvince {
+                construtor(nom, evenement, phenomene, temperature,){
+                    this.nom = nom;
+                    this.evenement = evenement;
+                    this.pheno = pheno;
+                    
+                    }
+                    decrire(){
+                        return this.nom;
+                }
+            }
+
+
+            let openStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
                 maxZoom: 5,
                 minZoom: 5,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
             //creation des icons
-            var soleil = L.icon({
+            let soleil = L.icon({
                 iconUrl: './images/PNG/soleil1.png',
                 shadowUrl: './images/marker-shadow.png',
                 iconSize: [40, 40],
@@ -1109,7 +1122,7 @@
                 popupAnchor: [0, 0]
 
             });
-            var pluie = L.icon({
+            let pluie = L.icon({
                 iconUrl: './images/PNG/pluie1.png',
                 shadowUrl: './images/marker-shadow.png',
                 iconSize: [40, 40],
@@ -1119,7 +1132,7 @@
                 popupAnchor: [0, 0]
 
             });
-            var orage = L.icon({
+            let orage = L.icon({
                 iconUrl: './images/PNG/orage1.png',
                 shadowUrl: './images/marker-shadow.png',
                 iconSize: [40, 40],
@@ -1129,7 +1142,7 @@
                 popupAnchor: [0, 0]
 
             });
-            var cielGris = L.icon({
+            let cielGris = L.icon({
                 iconUrl: './images/PNG/cielgris1.png',
                 shadowUrl: './images/marker-shadow.png',
                 iconSize: [40, 25],
@@ -1149,7 +1162,7 @@
                 popupAnchor: [0, 0]
 
             });
-            var pop = L.popup({
+            let pop = L.popup({
                 offset: (42,35)
             })
             //ajout de marker et leurs icons
